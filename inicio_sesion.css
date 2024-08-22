@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #282828;
+}
+
+.fondo-mapa {
+    background-image: url('imagenes/Map.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+}
+
+.formulario-conainer {
+    background-color: #4F4F4F;
+    border-radius: 1rem;
+    padding: 2em;
+    text-align: center;
+    width: 100%;
+    /* Ajuste de ancho para que ocupe casi toda la pantalla */
+    max-width: 40rem;
+    /* El máximo ancho se ha incrementado */
+    margin: auto;
+    text-decoration: none;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    background-color: #4F4F4F;
+    border-radius: 1cm;
+    padding: 2em 5em;
+    text-align: center;
+    max-width: 600px;
+    margin: auto;
+    justify-content: center;
+}
+
+.opciones {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 12rem;
+    align-items: center;
+    font-weight: bold;
+}
+
+.opciones a {
+    text-decoration: none;
+    color: #aaa;
+    padding-bottom: 0.1em;
+
+    transition-property: all;
+    transition-duration: 250ms;
+}
+
+.opciones a:hover {
+    color: #D4A15C;
+    text-decoration: none;
+    /* border-bottom: .1rem solid #D4A15C; */
+}
+
+.opciones a.active {
+    color: #D4A15C;
+    border-bottom: .1rem solid #D4A15C;
+}
+
+
+.inputs {
+    background-color: #FFFFFF;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 0.5em;
+    margin: 0.5em 0;
+    width: calc(100% - 0.1em);
+}
+
+.iniciar-sesion {
+    background-color: #D4A15C;
+    border: none;
+    border-radius: 20px;
+    color: #644a26;
+    font-size: 1em;
+    padding: 0.75em 1.5em;
+    cursor: pointer;
+    width: calc(100% - 80px);
+    margin-top: 1em;
+    font-weight: bold;
+}
+
+.recordame {
+    color: #FFFFFF;
+    margin-left: 1.25em;
+}
