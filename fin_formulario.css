@@ -1,0 +1,25 @@
+.fondo {
+    background-color: rgba(44, 44, 44, 1);
+}
+.mapa-con-fondo {
+    width: 1475px;
+    height: 625px;
+    background-image: url('imagenes/Map.png');
+    background-size: cover;
+    border-radius: 10px; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+.completado {
+    width: 430px;
+    height: 300px;
+    position: absolute;
+    border-radius: 2rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}

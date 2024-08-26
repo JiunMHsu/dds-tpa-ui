@@ -26,31 +26,12 @@
     margin: auto;
     justify-content: center;
 }
-
-.opciones {
+.atras {
     display: flex;
-    justify-content: space-evenly;
-    margin: 0 12rem;
-    align-items: center;
-    font-weight: bold;
-}
-.opciones a {
-    text-decoration: none;
-    color: #aaa;
-    padding-bottom: 0.1em;
-
-    transition-property: all;
-    transition-duration: 250ms;
-}
-
-.opciones a:hover {
-    color: #D4A15C;
-    text-decoration: none;
-}
-
-.opciones a.active {
-    color: #D4A15C;
-    border-bottom: .1rem solid #D4A15C;
+    top: 0px;
+    right: 90px;
+    width: 40px;
+    height: 40px;
 }
 
 .inputs {

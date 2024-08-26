@@ -5,16 +5,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign up</title>
+    <title>Sign up-Juridica</title>
     <link rel="stylesheet" href="sign_up_juridica.css" />
 </head>
 
 <body class="fondo">
     <div class="mapa-con-fondo"></div>
     <div class="formulario-conainer" id="formulario-conainer">
-        <div class="opciones">
-            <a href="inicio_sesion.html" id="login-btn">LOG IN</a>
-            <a href="sign_up.html" class="active" id="signup-btn">SIGN UP</a>
+        <div class="ir-para-atras">
+            <a href="sign_up.html">
+                <img src="imagenes/ParaAtras.png" alt="Cargar imagen" class="atras">
+            </a>
         </div>
 
         <div class="foto-perfil-container">
@@ -26,7 +27,7 @@
                 <input type="file" id="imagen" name="imagen" required accept="image/*" style="display: none;" />
             </div>
         </div>
-        <form action="" class="formulario" id="formulario">
+        <form action="registro_juridica.html" class="formulario" id="formulario">
             <div class="row auto justify-content-center">
                 <input type="text" id="razonSocial" name="razonSocial" required placeholder="Razon social"
                     class="inputs" />
@@ -52,11 +53,13 @@
             </div>
             <div class="row auto justify-content-center">
                 <input type="text" id="direccion" name="direccion" required placeholder="Direccion" class="inputs" />
-                <div class="row m-3 justify-content-center">
-                    <button type="submit" id="continuar" class="continuar">
-                        Continuar
-                    </button>
-                </div>
+            </div>
+            <div class="row m-3 justify-content-center">
+                <button type="submit" id="continuar" class="continuar">
+                    Continuar
+                </button>
+
+            </div>
 
         </form>
 
@@ -70,6 +73,17 @@
                 } else {
                     detalleMedio.value = "";
                 }
+            }
+            const camposDeEntrada = document.querySelectorAll('.inputs');
+
+            function validarFormulario() {
+                const camposCompletos = Array.from(camposDeEntrada).every((campo) => campo.value.trim() !== '');
+
+                if (!camposCompletos) {
+                    document.getElementById('mensaje-advertencia').style.display = 'block';
+                    return false;
+                }
+                return true;
             }
         </script>
     </div>

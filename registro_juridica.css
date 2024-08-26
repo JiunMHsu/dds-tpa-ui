@@ -26,31 +26,6 @@
     margin: auto;
     justify-content: center;
 }
-.atras {
-    display: flex;
-    top: 0px;
-    right: 90px;
-    width: 40px;
-    height: 40px;
-}
-
-.inputs {
-    background-color: #FFFFFF;
-    border: 1px solid grey;
-    border-radius: 5px;
-    padding: 0.5em;
-    margin: 0.5em 0;
-    width: calc(100% - 1em);
-}
-.ingresarDetalle {
-    background-color: #FFFFFF;
-    border: 1px solid grey;
-    border-radius: 5px;
-    padding: 0.5em;
-    margin: 0.5em 0;
-    width: calc(100% - 12.5em);
-}
-
 .continuar {
     background-color: #D4A15C;
     border: none;
@@ -63,6 +38,14 @@
     margin-top: 1em;
     font-weight: bold;
 }
+.atras {
+    display: flex;
+    top: 0px;
+    right: 90px;
+    width: 40px;
+    height: 40px;
+}
+
 .mapa-con-fondo {
     width: 1475px;
     height: 625px;
@@ -75,44 +58,25 @@
     transform: translate(-50%, -50%);
     z-index: 1;
 }
-.foto-perfil {
-    width: 60px;
-    height: 60px;
-    background-size: cover;
-    border-radius: 10px; 
-    margin-top: 10px;
-    /*position: absolute;*/
-    /*padding: 0.5em;
-    margin: 0.5em 0;*/
+.custom-checkbox {
+    display: flex; 
+    align-items: center; 
 }
-.imagen {
-    width: 25px;
-    height: 25px;
-    background-size: cover;
-    border-radius: 10px; 
-    /*position: absolute;*/
-    /*padding: 0.5em;
-    margin: 0.5em 0;*/
-    position: absolute;
-    top: 118px;
-    right: 315px;
-    /*transform: translate(-50%, -50%);*/
+
+.custom-checkbox input[type="checkbox"] {
+    display: none; 
 }
-select#medioDeContacto {
+
+.custom-checkbox label {
     background-color: #FFFFFF;
     border: 1px solid grey;
     border-radius: 5px;
     padding: 0.5em;
     margin: 0.5em 0;
-    width: calc(100% - 25em);
-    color: rgba(117, 115, 115, 1);
+    width: calc(100% - 1em);
+    cursor: pointer; 
 }
-input#fechaNacimiento {
-    background-color: #FFFFFF;
-    border: 1px solid grey;
-    border-radius: 5px;
-    padding: 0.5em;
-    margin: 0.5em 0;
-    width: calc(100% - em);
-    color: rgba(117, 115, 115, 1);
+.custom-checkbox input[type="checkbox"]:checked + label {
+    background-color: hsl(0, 0%, 75%); 
+    border: 3.5px solid black;
 }
