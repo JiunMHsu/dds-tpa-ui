@@ -1,78 +1,57 @@
 <!DOCTYPE html>
 
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Inicio de Sesión</title>
-    <link rel="stylesheet" href="inicio_sesion.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-    />
-  </head>
 
-  <body class="fondo-mapa">
-    <div class="formulario-conainer" id="formulario-conainer">
-      <div class="opciones">
-        <a href="#" class="active" id="login-btn">LOG IN</a>
-        <a href="#" id="signup-btn">SIGN UP</a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inicio de Sesión</title>
+  <link rel="stylesheet" href="inicio_sesion.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" />
+</head>
+
+<body class="fondo">
+  <div class="mapa-con-fondo"></div>
+  <div class="formulario-conainer" id="formulario-conainer">
+    <div class="opciones">
+      <a href="inicio_sesion.html" class="active" id="login-btn">LOG IN</a>
+      <a href="sign_up.html" id="signup-btn">SIGN UP</a>
+    </div>
+
+    <form action="" class="formulario" id="formulario">
+
+      <div class="row auto justify-content-center">
+        <input type="text" id="mail" name="mail" required placeholder="Mail" class="inputs" />
       </div>
 
-      <form action="" class="formulario" id="formulario">
-        <div class="row auto justify-content-center">
-          <input
-            type="text"
-            id="mail"
-            name="mail"
-            required
-            placeholder="Mail"
-            class="inputs"
-          />
-        </div>
+      <div class="row auto justify-content-center">
+        <input type="password" id="contrasena" name="contrasena" required placeholder="Contraseña" class="inputs" />
+      </div>
 
-        <div class="row auto justify-content-center">
-          <input
-            type="text"
-            id="contrasena"
-            name="contrasena"
-            required
-            placeholder="Contraseña"
-            class="inputs"
-          />
-        </div>
+      <div class="row m-2 recordame">
+        <label>
+          <input type="checkbox" id="recordarme" name="recordame" />
+          Recordame
+        </label>
+      </div>
 
-        <div class="row m-2 recordame">
-          <label>
-            <input type="checkbox" id="recordarme" name="recordame" />
-            Recordame
-          </label>
-        </div>
+      <div class="row m-3 justify-content-center">
+        <button type="submit" id="iniciar-sesion" class="iniciar-sesion">
+          Iniciar Sesión
+        </button>
+      </div>
+    </form>
+  </div>
+  <div class="mapa-con-fondo"></div>
+</body>
 
-        <div class="row m-3 justify-content-center">
-          <button type="submit" id="iniciar-sesion" class="iniciar-sesion">
-            Iniciar Sesión
-          </button>
-        </div>
-      </form>
-    </div>
-  </body>
+<script src="./iniciar_sesion.js"></script>
 
-  <script src="./iniciar_sesion.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-  <script
-    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"
-  ></script>
-  <script
-    src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"
-  ></script>
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"
-  ></script>
 </html>
