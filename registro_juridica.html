@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro-Juridica</title>
+    <link rel="stylesheet" href="registro_juridica.css" />
+</head>
+
+
+<body class="fondo">
+    <div class="mapa-con-fondo"></div>
+    <div class="formulario-conainer" id="formulario-conainer">
+        <div class="ir-para-atras">
+            <a href="sign_up_humana.html">
+                <img src="imagenes/ParaAtras.png" alt="Cargar imagen" class="atras">
+            </a>
+        </div>
+        <label for="seleccione" class="seleccionar">Seleccione de que forma/s desea colaborar</label>
+        <form action="fin_formulario.html" class="formulario" id="formulario">
+            <div class="custom-checkbox">
+                <input type="checkbox" id="opcion1" name="opcion1" value="opcion1">
+                <label for="opcion1">Donar dinero</label>
+            </div>
+            <div class="custom-checkbox">
+                <input type="checkbox" id="opcion2" name="opcion2" value="opcion2">
+                <label for="opcion2">Hacerse cargo de heladera/s</label>
+            </div>
+
+            <div class="row m-3 justify-content-center">
+                <button type="submit" id="continuar" class="continuar">
+                    Continuar
+                </button>
+            </div>
+        </form>
+        <script>
+            const opcionesCheckbox = document.querySelectorAll('.custom-checkbox input');
+            const botonContinuar = document.getElementById('continuar');
+
+            opcionesCheckbox.forEach((checkbox) => {
+                checkbox.addEventListener('change', validarFormulario);
+            });
+
+            function validarFormulario() {
+                const alMenosUnaSeleccionada = Array.from(opcionesCheckbox).some((checkbox) => checkbox.checked);
+
+                if (alMenosUnaSeleccionada) {
+                    botonContinuar.removeAttribute('disabled');
+                } else {
+                    botonContinuar.setAttribute('disabled', 'true');
+                }
+            }
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+.fondo {
+    background-color: rgba(44, 44, 44, 1);
+}
+.formulario-conainer {
+    background-color: #4F4F4F;
+    border-radius: 1rem;
+    padding: 2em;
+    text-align: center;
+    width: 100%;
+    max-width: 40rem;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+.formulario {
+    display: flex;
+    flex-direction: column;
+    background-color: #4F4F4F;
+    border-radius: 1cm;
+    padding: 1.5em 5em;
+    text-align: center;
+    max-width: 600px;
+    margin: auto;
+    justify-content: center;
+}
+.atras {
+    display: flex;
+    top: 0px;
+    right: 90px;
+    width: 40px;
+    height: 40px;
+}
+
+.inputs {
+    background-color: #FFFFFF;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 0.5em;
+    margin: 0.5em 0;
+    width: calc(100% - 1em);
+}
+.ingresarDetalle {
+    background-color: #FFFFFF;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 0.5em;
+    margin: 0.5em 0;
+    width: calc(100% - 12.5em);
+}
+
+.continuar {
+    background-color: #D4A15C;
+    border: none;
+    border-radius: 20px;
+    color: #644a26;
+    font-size: 1em;
+    padding: 0.75em 1.5em;
+    cursor: pointer;
+    width: calc(100% - 80px);
+    margin-top: 1em;
+    font-weight: bold;
+}
+.mapa-con-fondo {
+    width: 1475px;
+    height: 625px;
+    background-image: url('imagenes/Map.png');
+    background-size: cover;
+    border-radius: 10px; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+.foto-perfil {
+    width: 60px;
+    height: 60px;
+    background-size: cover;
+    border-radius: 10px; 
+    margin-top: 10px;
+    /*position: absolute;*/
+    /*padding: 0.5em;
+    margin: 0.5em 0;*/
+}
+.imagen {
+    width: 25px;
+    height: 25px;
+    background-size: cover;
+    border-radius: 10px; 
+    /*position: absolute;*/
+    /*padding: 0.5em;
+    margin: 0.5em 0;*/
+    position: absolute;
+    top: 118px;
+    right: 315px;
+    /*transform: translate(-50%, -50%);*/
+}
+select#medioDeContacto {
+    background-color: #FFFFFF;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 0.5em;
+    margin: 0.5em 0;
+    width: calc(100% - 25em);
+    color: rgba(117, 115, 115, 1);
+}
+input#fechaNacimiento {
+    background-color: #FFFFFF;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 0.5em;
+    margin: 0.5em 0;
+    width: calc(100% - em);
+    color: rgba(117, 115, 115, 1);
+}

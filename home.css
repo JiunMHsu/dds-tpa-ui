@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+@import url('https://fonts.googleapis.com/css2?family=Kite+One&display=swap');
+
+.fondo {
+    background-color: rgba(44, 44, 44, 1);
+}
+.mapa-con-fondo {
+    width: 765px;
+    height: 340px;
+    background-image: url('imagenes/Map.png');
+    background-size: cover;
+    border-radius: 10px; 
+    position: absolute;
+    top: 47%;
+    left: 69%;
+    transform: translate(-50%, -50%);
+    filter: brightness(80%);
+}
+.logo-ong {
+    width: 250px;
+    height: 100px;
+    margin-top: 25px;
+    margin-left: 40px;
+}
+h1 {
+    position: absolute;
+    color: #aaa;
+    font-family: "Josefin Sans";
+    top: 215px;
+    left: 75px;
+    font-size: 20px; 
+    overflow: hidden;
+    white-space: normal;
+    text-overflow: ellipsis;
+    width: 500px; 
+    height: 500px; 
+}
+
+p{
+    position: absolute;
+    color: #aaa;
+    font-family: "Kite One";
+    top: 335px;
+    left: 85px;
+    font-size: 20px; 
+    font-size: 22px;
+    overflow: hidden;
+    white-space: normal;
+    text-overflow: ellipsis;
+    width: 575px; 
+    height: 500px; 
+}
+.colaboraciones {
+    display: block;
+    margin: 395px auto;
+    width: 1150px;
+    height: 110px;
+}
+
+.opciones {
+    position: absolute;
+    top: 50px;
+    right: 80px;
+    padding-bottom: 0.1em;
+    text-align: center;
+}
+
+#login-btn,
+#signup-btn {
+    color: #aaa;
+    font-family: "arial";
+    font-weight: bold;
+    background-color: rgba(117, 115, 115, 1);
+    border-radius: 8px; 
+    font-size: larger; 
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 9px;
+    padding-bottom: 10px;
+    margin: 0px 10px;
+}

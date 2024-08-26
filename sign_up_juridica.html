@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up-Juridica</title>
+    <link rel="stylesheet" href="sign_up_juridica.css" />
+</head>
+
+<body class="fondo">
+    <div class="mapa-con-fondo"></div>
+    <div class="formulario-conainer" id="formulario-conainer">
+        <div class="ir-para-atras">
+            <a href="sign_up.html">
+                <img src="imagenes/ParaAtras.png" alt="Cargar imagen" class="atras">
+            </a>
+        </div>
+
+        <div class="foto-perfil-container">
+            <img src="imagenes/FotoPerfil.png" class="foto-perfil">
+            <div class="foto-perfil-container">
+                <label for="imagen">
+                    <img src="imagenes/Cargar Imagen.png" alt="Cargar imagen" class="imagen">
+                </label>
+                <input type="file" id="imagen" name="imagen" required accept="image/*" style="display: none;" />
+            </div>
+        </div>
+        <form action="registro_juridica.html" class="formulario" id="formulario">
+            <div class="row auto justify-content-center">
+                <input type="text" id="razonSocial" name="razonSocial" required placeholder="Razon social"
+                    class="inputs" />
+            </div>
+            <div class="row auto justify-content-center">
+                <select id="tipo" name="tipo" onchange="updateInput()">
+                    <option value="" disabled selected>Tipo</option>
+                    <option value="gubernamental">Gubernamental</option>
+                    <option value="ong">ONG</option>
+                    <option value="empresa">Empresa</option>
+                    <option value="institución">Institución</option>
+                </select>
+            </div>
+            <div class="row auto justify-content-center">
+                <select id="medioDeContacto" name="medioDeContacto" onchange="updateInput()">
+                    <option value="" disabled selected>Medio de contacto</option>
+                    <option value="whatsapp">WhatsApp</option>
+                    <option value="email">Correo electrónico</option>
+                    <option value="phone">Teléfono</option>
+                </select>
+                <input type="text" id="detalleMedio" name="detalleMedio" required placeholder="Ingresa los detalles"
+                    class="ingresarDetalle">
+            </div>
+            <div class="row auto justify-content-center">
+                <input type="text" id="direccion" name="direccion" required placeholder="Direccion" class="inputs" />
+            </div>
+            <div class="row m-3 justify-content-center">
+                <button type="submit" id="continuar" class="continuar">
+                    Continuar
+                </button>
+
+            </div>
+
+        </form>
+
+        <script>
+            function updateInput() {
+                const medioDeContacto = document.getElementById("medioDeContacto");
+                const detalleMedio = document.getElementById("detalleMedio");
+
+                if (medioDeContacto.value === "whatsapp") {
+                    detalleMedio.value = "+54 9";
+                } else {
+                    detalleMedio.value = "";
+                }
+            }
+            const camposDeEntrada = document.querySelectorAll('.inputs');
+
+            function validarFormulario() {
+                const camposCompletos = Array.from(camposDeEntrada).every((campo) => campo.value.trim() !== '');
+
+                if (!camposCompletos) {
+                    document.getElementById('mensaje-advertencia').style.display = 'block';
+                    return false;
+                }
+                return true;
+            }
+        </script>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+.fondo {
+    background-color: rgba(44, 44, 44, 1);
+}
+.formulario-conainer {
+    background-color: #4F4F4F;
+    border-radius: 1rem;
+    padding: 2em;
+    text-align: center;
+    width: 100%;
+    max-width: 40rem;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+.formulario {
+    display: flex;
+    flex-direction: column;
+    background-color: #4F4F4F;
+    border-radius: 1cm;
+    padding: 1.5em 5em;
+    text-align: center;
+    max-width: 600px;
+    margin: auto;
+    justify-content: center;
+}
+.continuar {
+    background-color: #D4A15C;
+    border: none;
+    border-radius: 20px;
+    color: #644a26;
+    font-size: 1em;
+    padding: 0.75em 1.5em;
+    cursor: pointer;
+    width: calc(100% - 80px);
+    margin-top: 1em;
+    font-weight: bold;
+}
+.atras {
+    display: flex;
+    top: 0px;
+    right: 90px;
+    width: 40px;
+    height: 40px;
+}
+
+.mapa-con-fondo {
+    width: 1475px;
+    height: 625px;
+    background-image: url('imagenes/Map.png');
+    background-size: cover;
+    border-radius: 10px; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+.custom-checkbox {
+    display: flex; 
+    align-items: center; 
+}
+
+.custom-checkbox input[type="checkbox"] {
+    display: none; 
+}
+
+.custom-checkbox label {
+    background-color: #FFFFFF;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 0.5em;
+    margin: 0.5em 0;
+    width: calc(100% - 1em);
+    cursor: pointer; 
+}
+.custom-checkbox input[type="checkbox"]:checked + label {
+    background-color: hsl(0, 0%, 75%); 
+    border: 3.5px solid black;
+}
