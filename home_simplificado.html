@@ -8,19 +8,30 @@
 
     <body class= "fondo"> 
         <div class = "mapa-con-fondo"></div>
-        <label for="seleccione" class="seleccionar">Seleccione de qué forma desea colaborar</label>
-        
 
+
+      <label for = "seleccione" class = "seleccionar">Seleccione la forma de colaborar</label>
+        <select id = "opciones" name = "opciones"> 
+            <option value="opcion1">Donar Dinero</option>
+            <option value="opcion2">Donar Vianda</option>
+            <option value="opcion3">Entregar Vianda</option>
+            <option value="opcion4">Distribuir Viandas</option>
+            <option value="opcion5">Repartir Tarjetas</option>
+
+        </select>
+        <div class = "row m3 justify-content-center">   
+          <button type = "submit" id = "continuar" class = "continuar">
+                Continuar
+           </button>
+        </div>
+
+        <label for= "archivo" class = "seleccionar">Cargar archivo con colaboraciones</label>
+        <input type = "file" id = "archivo" name = "archivo"> 
         <div class = "row m3 justify-content-center">
             <button type = "submit" id = "continuar" class = "continuar">
                 Continuar
             </button>
         </div>
 
-        <div class = "row m3 justify-content-center">
-            <button type = "submit" id = "continuar" class = "continuar">
-                Continuar
-            </button>
-        </div>
     </body>
 </html>
