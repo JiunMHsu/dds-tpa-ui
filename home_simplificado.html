@@ -7,17 +7,16 @@
     </head>
 
     <body class= "fondo"> 
-        <div class = "mapa-con-fondo"></div>
-
+      <div class = "mapa-con-fondo"></div>
+      <div class="formulario-conainer" id="formulario-conainer">
 
       <label for = "seleccione" class = "seleccionar">Seleccione la forma de colaborar</label>
-        <select id = "opciones" name = "opciones"> 
+        <select id = "opciones" name = "opciones" class = "custom-select"> 
             <option value="opcion1">Donar Dinero</option>
             <option value="opcion2">Donar Vianda</option>
             <option value="opcion3">Entregar Vianda</option>
             <option value="opcion4">Distribuir Viandas</option>
             <option value="opcion5">Repartir Tarjetas</option>
-
         </select>
         <div class = "row m3 justify-content-center">   
           <button type = "submit" id = "continuar" class = "continuar">
@@ -25,8 +24,10 @@
            </button>
         </div>
 
-        <label for= "archivo" class = "seleccionar">Cargar archivo con colaboraciones</label>
-        <input type = "file" id = "archivo" name = "archivo"> 
+        <label for= "archivo" class="file-upload-label"> 
+        <span class = "upload-button">Cargar archivo con colaboraciones</span>
+        <input type = "file" id = "archivo" name = "archivo" class = "input-file"> 
+        </label>
         <div class = "row m3 justify-content-center">
             <button type = "submit" id = "continuar" class = "continuar">
                 Continuar
