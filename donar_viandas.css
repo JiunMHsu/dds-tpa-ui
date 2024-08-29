@@ -1,0 +1,131 @@
+.fondo{
+    box-sizing: border-box;
+    appearance: none;
+    height: 99vh;
+    width: 100vw;
+    align-content: center;
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(44, 44, 44, 1);
+    padding: 1rem;
+}
+
+.mapa-con-fondo{
+    display: inline;
+    margin: 0 .5rem;
+    height: auto;
+    width: auto;
+    border-radius: 1rem;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.mapa-con-fondo img{
+    position: relative;
+    height: inherit;
+    justify-content: center;
+}
+
+.formulario-conainer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 3rem;
+    background-color: #4F4F4F;
+    margin: 0 .5rem;
+    border-radius: 1rem;
+    text-align: center;
+    width: 40rem;
+    gap: 1rem;
+}
+
+.continuar {
+    text-align: center;
+    background-color: #D4A15C;
+    border: none;
+    border-radius: 99px;
+    color: #644a26;
+    font-size: 1em;
+    padding: 0.75em 1.5em;
+    cursor: pointer;
+    width: 15rem;
+    margin-top: 1em;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+.ingresar_nombre{
+    appearance: none;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: #fff;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    width: 35rem;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+.ingresar_calorias{
+    appearance: none;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: #fff;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    width: 35rem;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+.ingresar_peso{
+    appearance: none;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: #fff;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    width: 35rem;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+.ingresar_caducidad{
+    appearance: none;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: #fff;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    width: 35rem;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+.columna-izquierda {
+    background-color: #4F4F4F;
+    display: flex;
+    border-radius: 1rem;
+    margin: 0 .5rem;
+    text-align: center;
+    width: 6rem;
+    height: 100%;
+}
+
+.columna-izquierda a {
+    padding: auto auto;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    display: block;
+    position: relative;
+    max-width: 100px;
+    max-height: 85vh;
+}

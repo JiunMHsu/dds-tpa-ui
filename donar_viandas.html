@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link
+        rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="donar_viandas.css" />    
+    </head>
+    
+    <body class = "fondo">
+        <div class = "columna-izquierda">
+            <a>Persona Sit Vulnerable 
+                <img src="imagenes/">
+            </a>
+        </div>
+        <div class = "mapa-con-fondo">
+            <img src = "imagenes/Map.png" alt = ""/>
+            <div class = "formulario-conainer">
+                <span style="appearance: none; color: white; font-size: 1.3em; margin: 0.75em 1.5em;"> 
+                    Donar Vianda 
+                </span>
+                <label style="appearance: none; color: white; font-size: 1.0em; margin: 0.75em 1.5em;">
+                    Ingresar nombre de la comida <br/>
+                    <input type="text" name ="nombre" class ="ingresar_nombre" placeholder="Guiso...">
+                </label>
+                <label style="appearance: none; color: white; font-size: 1.0em; margin: 0.75em 1.5em;"> 
+                    Ingresar calorias: <br/>
+                    <input type="number" name="calorias" class="ingresar_calorias" placeholder="2000..." min="0">
+                </label>
+                <label style="appearance: none; color: white; font-size: 1.0em; margin: 0.75em 1.5em;"> 
+                    Ingresar peso de la vianda: <br/>
+                    <input type="number" name="peso" class="ingresar_calorias" placeholder="...kg" min="0">
+                </label>
+                <label style="appearance: none; color: white; font-size: 1.0em; margin: 0.75em 1.5em;"> 
+                    Ingresar fecha de caducidad: <br/>
+                    <input type="date" name="caducidad" class="ingresar_caducidad" placeholder="DIA/MES/AÑO">
+                </label>
+                <button type="submit" id="continuar" class="continuar">Continuar</button>
+            </div>    
+        </div>    
+    </body>
+</html>
