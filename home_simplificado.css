@@ -1,66 +1,65 @@
 .fondo {
+    box-sizing: border-box;
     appearance: none;
+    height: 99vh;
+    width: 100vw;
+    align-content: center;
+    display: flex;
+    flex-direction: row;
     background-color: rgba(44, 44, 44, 1);
+    padding: 1rem;
 }
 
 .mapa-con-fondo {
-    width: 1475px;
-    height: 625px;
-    background-image: url('imagenes/Map.png');
-    background-size: cover;
-    border-radius: 10px; 
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
+    display: inline;
+    margin: 0 .5rem;
+    height: auto;
+    width: auto;
+    border-radius: 1rem;
+    overflow: hidden;
+    object-fit: cover;
 }
 
+.mapa-con-fondo img {
+    position: relative;
+    height: inherit;
+    justify-content: center;
+}
+
+/* !! */
 .formulario-conainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 3rem;
     background-color: #4F4F4F;
+    margin: 0 .5rem;
     border-radius: 1rem;
-    padding: 2em;
     text-align: center;
-    width: 100%;
-    max-width: 30rem;
-    height: 85vh;
-    margin: auto;
-    position: absolute;
-    top: 50%;
-    right: 3%;
-    transform: translateY(-50%);
-    z-index: 3;
+    width: 40rem;
+    gap: 1rem;
 }
 
 .continuar {
     text-align: center;
     background-color: #D4A15C;
     border: none;
-    border-radius: 20px;
+    border-radius: 99px;
     color: #644a26;
     font-size: 1em;
     padding: 0.75em 1.5em;
     cursor: pointer;
-    width: calc(100% - 80px);
+    width: 15rem;
     margin-top: 1em;
     font-weight: bold;
-}
-.row {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin: 10px 0;
 }
 
 .seleccionar {
     appearance: none;
     color: white;
-    font-size: 1.1em;
-    padding: 0.75em 1.5em;
-    cursor: pointer;
-    width: calc(100% - 80px);
-    margin-top: 1em;
-    white-space: nowrap;
+    font-size: 1.3em;
+    margin: 0.75em 1.5em;
 }
 
 .custom-select {
@@ -73,7 +72,7 @@
     color: #333;
     cursor: pointer;
     width: 100%;
-    max-width: 400px; 
+    max-width: 400px;
     transition: border-color 0.2s, background-color 0.2s;
 }
 
@@ -84,76 +83,24 @@
 
 .custom-select::after {
     content: "▼";
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
     pointer-events: none;
     color: #333;
 }
 
-.container {
-    margin-top: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0.75em 1.5em;
-    border-radius: 10px;
-}
-
-.file-upload-label {
-    height: 42px;
-    color: white;
-    font-size: 1.2em;
-    text-align:left;
-    margin-bottom: 10px;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.file-upload-label::before {
-    height: 42px;
-    content: 'Adjuntar archivo .csv';
-    align-content: normal;
-    display: block;
-    background-color: #ffffff;
-    color: #4A4A4A;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 200%;
-    max-width: 400px; 
-    margin-top: 3px;
-    cursor: pointer;
-}
-
-.upload-button {
-    padding-top: 10px;
-    display: flex;
-}
-
-.file-input {
-    display: none;
-}
-
+/* !! */
 .columna-izquierda {
-    background-color: #4F4F4F; 
-    border-radius: 1rem; 
-    padding: 2em; /* Espacio interno ajustado */
+    background-color: #4F4F4F;
+    display: flex;
+    border-radius: 1rem;
+    margin: 0 .5rem;
     text-align: center;
-    width: 100px;
-    height: 85vh;
-    top: 10%;
-    left: 3%; /* Ajusta este valor para cambiar la distancia desde el borde izquierdo */
-    z-index: 3;
-    position: absolute;
-    text-size-adjust: auto;
+    width: 6rem;
+    height: 100%;
 }
-.columna-izquierda a{
-    padding: 10px auto; 
-    color: rgb(255, 255, 255); 
+
+.columna-izquierda a {
+    padding: 10px auto;
+    color: rgb(255, 255, 255);
     cursor: pointer;
     display: block;
     position: relative;
