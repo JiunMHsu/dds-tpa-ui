@@ -2,53 +2,6 @@
     appearance: none;
     background-color: rgba(44, 44, 44, 1);
 }
-.formulario-conainer {
-    background-color: #4F4F4F;
-    border-radius: 1rem;
-    padding: 2em;
-    text-align: center;
-    width: 100%;
-    max-width: 30rem;
-    height: 85vh;
-    margin: auto;
-    position: absolute;
-    top: 50%;
-    right: 2%;
-    transform: translateY(-50%);
-    z-index: 3;
-}
-.formulario {
-    display: flex;
-    flex-direction: column;
-    background-color: #4F4F4F;
-    border-radius: 1cm;
-    padding: 1.5em 5em;
-    text-align: center;
-    max-width: 600px;
-    margin: auto;
-    justify-content: center;
-}
-.continuar {
-    background-color: #D4A15C;
-    border: none;
-    text-decoration: solid;
-    border-radius: 20px;
-    color: #644a26;
-    font-size: 1em;
-    padding: 0.75em 1.5em;
-    cursor: pointer;
-    width: calc(100% - 80px);
-    margin-top: 1em;
-    font-weight: bold;
-    padding-bottom: 60 px;
-}
-.atras {
-    display: flex;
-    top: 0px;
-    right: 90px;
-    width: 40px;
-    height: 40px;
-}
 
 .mapa-con-fondo {
     width: 1475px;
@@ -62,27 +15,41 @@
     transform: translate(-50%, -50%);
     z-index: 1;
 }
-.custom-checkbox {
-    display: flex; 
-    align-items: center; 
+
+.formulario-conainer {
+    background-color: #4F4F4F;
+    border-radius: 1rem;
+    padding: 2em;
+    text-align: center;
+    width: 100%;
+    max-width: 30rem;
+    height: 85vh;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    right: 3%;
+    transform: translateY(-50%);
+    z-index: 3;
 }
 
-.custom-checkbox input[type="checkbox"] {
-    display: none; 
+.continuar {
+    text-align: center;
+    background-color: #D4A15C;
+    border: none;
+    border-radius: 20px;
+    color: #644a26;
+    font-size: 1em;
+    padding: 0.75em 1.5em;
+    cursor: pointer;
+    width: calc(100% - 80px);
+    margin-top: 1em;
+    font-weight: bold;
 }
-
-.custom-checkbox label {
-    background-color: #FFFFFF;
-    border: 1px solid grey;
-    border-radius: 5px;
-    padding: 0.5em;
-    margin: 0.5em 0;
-    width: calc(100% - 1em);
-    cursor: pointer; 
-}
-.custom-checkbox input[type="checkbox"]:checked + label {
-    background-color: hsl(0, 0%, 75%); 
-    border: 3.5px solid black;
+.row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
 }
 
 .seleccionar {
@@ -93,15 +60,7 @@
     cursor: pointer;
     width: calc(100% - 80px);
     margin-top: 1em;
-}
-
-.cargar {
-    color: white;
-    font-size: 1.1em;
-    padding: 0.75em 1.5em;
-    cursor: pointer;
-    width: calc(100% - 80px);
-    margin-top: 1em;
+    white-space: nowrap;
 }
 
 .custom-select {
@@ -133,48 +92,68 @@
     color: #333;
 }
 
-.input-file{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 50;
-    cursor: pointer;
+.container {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.75em 1.5em;
+    border-radius: 10px;
 }
 
 .file-upload-label {
-    display: inline-block;
-    position: relative;
-    cursor: pointer;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    padding: 10px 20px;
-    background-color: #2196F3;
+    height: 42px;
     color: white;
-    text-align: center;
-    font-size: 16px;
-    transition: background-color 0.2s, border-color 0.2s;
+    font-size: 1.2em;
+    text-align:left;
+    margin-bottom: 10px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* Estilo para el botón de carga de archivos */
-.upload-button {
-    padding-top: 60px;
+.file-upload-label::before {
+    height: 42px;
+    content: 'Adjuntar archivo .csv';
+    align-content: normal;
     display: block;
-}
-/* Ocultar el campo de entrada de archivos */
-.file-input {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
+    background-color: #ffffff;
+    color: #4A4A4A;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200%;
+    max-width: 400px; 
+    margin-top: 3px;
     cursor: pointer;
 }
 
-/* Cambiar el color del botón al pasar el mouse por encima */
-.file-upload-label:hover {
-    background-color: #1e7bce;
-    border-color: #1e7bce;
+.upload-button {
+    padding-top: 10px;
+    display: flex;
+}
+
+.file-input {
+    display: none;
+}
+
+.columna-izquierda {
+    background-color: #4F4F4F; 
+    border-radius: 1rem; 
+    padding: 2em; /* Espacio interno ajustado */
+    text-align: center;
+    width: 100px;
+    height: auto;
+    top: auto;
+    left: 3%; /* Ajusta este valor para cambiar la distancia desde el borde izquierdo */
+    z-index: 3;
+    position: absolute;
+}
+.columna-izquierda a {
+    padding: 10px 15px; 
+    color: rgb(255, 255, 255); 
+    cursor: pointer;
+    display: block;
+    position: relative;
 }
