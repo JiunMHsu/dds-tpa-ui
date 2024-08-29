@@ -1,51 +1,73 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset = "UTF-8">
-        <link rel = "stylesheet" href = "home_simplificado.css"/>
-        <link rel ="stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />   
-    </head>
 
-    <body class= "fondo"> 
-      <div class = "mapa-con-fondo"></div>
-      <div class="formulario-conainer" id="formulario-conainer">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="home_simplificado.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      <label for = "seleccione" class = "seleccionar">Seleccione la forma de colaborar</label>
-        <select id = "opciones" name = "opciones" class = "custom-select"> 
+</head>
+
+<body class="fondo">
+    <div class="mapa-con-fondo"></div>
+    <div class="formulario-conainer" id="formulario-conainer">
+
+        <label for="seleccione" class="seleccionar">Seleccione la forma de colaborar</label>
+        <select id="opciones" name="opciones" class="custom-select">
             <option value="opcion1">Donar Dinero</option>
             <option value="opcion2">Donar Vianda</option>
             <option value="opcion3">Entregar Vianda</option>
             <option value="opcion4">Distribuir Viandas</option>
             <option value="opcion5">Repartir Tarjetas</option>
         </select>
-        <div class = "row m3 justify-content-center">   
-          <button type = "submit" id = "continuar" class = "continuar">
+        <div class="row m3 justify-content-center">
+            <button type="submit" id="continuar" class="continuar">
                 Continuar
-           </button>
+            </button>
         </div>
-        <div class = "container">
-            <span class = "seleccionar">Cargar archivo con colaboraciones</span>
-            <label for= "archivo" class="file-upload-label"> 
-            <input type = "file" id = "archivo" name = "archivo" class = "file-input">
+        <div class="container">
+            <span class="seleccionar">Cargar archivo con colaboraciones</span>
+            <label for="archivo" class="file-upload-label">
+                <input type="file" id="archivo" name="archivo" class="file-input">
             </label>
-            <div class = "row m3 justify-content-center">
-                <button type = "submit" id = "continuar" class = "continuar">
+            <div class="row m3 justify-content-center">
+                <button type="submit" id="continuar" class="continuar">
                     Continuar
                 </button>
             </div>
         </div>
-      </div>
-
-    <div class = "columna-izquierda" id = "columna-izquierda">
-        <a class = "vulnerable">Persona Sit Vulnerable</a>
-        <a class = "fallas">Reportar fallas</a>
-        <a class = "reportes">Reportes</a>
-        <a class = "notificacion">Notificacion</a>
-        <a class = "heladeras">Heladeras</a>
-        <a class = "puntos">Puntos</a>
-        <a class = "perfil">Home</a>
-        <a class = "home">Perfil</a>
     </div>
 
-    </body>
+    <div class="columna-izquierda" id="columna-izquierda">
+        <ul>
+            <a class="vulnerable">Persona Sit Vulnerable
+                <img src="">
+            </a>
+            <a class="fallas">Reportar fallas
+                <img src=""> 
+            </a>
+            <a class="reportes">Reportes
+                <img src="">
+            </a>
+            <a class="notificacion">Notificacion
+                <img src="">
+            </a>
+            <a class="heladeras">Heladeras
+                <img src="">
+            </a>
+            <a class="puntos">Puntos
+                <img src="">
+           </a>
+            <a class="perfil">Home
+                <img src="">
+            </a>
+            <a class="home">Perfil
+                <img src="">     
+            </a>
+        </ul>
+    </div>
+
+</body>
+
 </html>

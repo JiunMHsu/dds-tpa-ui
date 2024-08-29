@@ -144,16 +144,19 @@
     padding: 2em; /* Espacio interno ajustado */
     text-align: center;
     width: 100px;
-    height: auto;
-    top: auto;
+    height: 85vh;
+    top: 10%;
     left: 3%; /* Ajusta este valor para cambiar la distancia desde el borde izquierdo */
     z-index: 3;
     position: absolute;
+    text-size-adjust: auto;
 }
-.columna-izquierda a {
-    padding: 10px 15px; 
+.columna-izquierda a{
+    padding: 10px auto; 
     color: rgb(255, 255, 255); 
     cursor: pointer;
     display: block;
     position: relative;
+    max-width: 100px;
+    max-height: 85vh;
 }
