@@ -1,4 +1,4 @@
-.fondo {
+.fondo{
     box-sizing: border-box;
     appearance: none;
     height: 99vh;
@@ -10,7 +10,7 @@
     padding: 1rem;
 }
 
-.mapa-con-fondo {
+.mapa-con-fondo{
     display: inline;
     margin: 0 .5rem;
     height: auto;
@@ -20,14 +20,17 @@
     object-fit: cover;
 }
 
-.mapa-con-fondo img {
+.mapa-con-fondo img{
     position: relative;
     height: inherit;
     justify-content: center;
 }
 
-/* !! */
-.formulario-conainer {
+.formulario-conainer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -56,14 +59,7 @@
     margin-bottom: 1em;
 }
 
-.seleccionar {
-    appearance: none;
-    color: white;
-    font-size: 1.3em;
-    margin: 0.75em 1.5em;
-}
-
-.custom-select {
+.ingresar_monto{
     appearance: none;
     border: 2px solid #ccc;
     border-radius: 4px;
@@ -72,23 +68,24 @@
     font-size: 16px;
     color: #333;
     cursor: pointer;
-    width: 100%;
-    max-width: 400px;
+    width: 35rem;
     transition: border-color 0.2s, background-color 0.2s;
 }
 
-.custom-select:focus {
-    border-color: #2196F3;
-    outline: none;
-}
-
-.custom-select::after {
-    content: "▼";
-    pointer-events: none;
+.ingresar_periodicidad{
+    appearance: none;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: #fff;
+    font-size: 16px;
     color: #333;
+    cursor: pointer;
+    width: 35rem;
+    transition: border-color 0.2s, background-color 0.2s;
 }
 
-/* !! */
+
 .columna-izquierda {
     background-color: #4F4F4F;
     display: flex;
@@ -100,7 +97,7 @@
 }
 
 .columna-izquierda a {
-    padding: 10px auto;
+    padding: auto auto;
     color: rgb(255, 255, 255);
     cursor: pointer;
     display: block;

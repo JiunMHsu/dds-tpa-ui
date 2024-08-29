@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+  />
+    <link rel="stylesheet" href="donar_dinero.css" />
+</head>
+
+<body class = "fondo">
+    <div class = "columna-izquierda">
+        <a></a>
+    </div>
+    <div class = "mapa-con-fondo">
+        <img src = "imagenes/Map.png" alt = ""/>
+        <div class = "formulario-conainer">
+            <span style="appearance: none; color: white; font-size: 1.3em; margin: 0.75em 1.5em;"> 
+                Donar Dinero 
+            </span>
+            <label style="appearance: none; color: white; font-size: 1.0em; margin: 0.75em 1.5em;">
+                Ingresar monto <br/>
+                <input type="number" name ="monto" class ="ingresar_monto" placeholder="$..." min="0">
+                </label>
+            <label style="appearance: none; color: white; font-size: 1.0em; margin: 0.75em 1.5em;"> Ingresar periodicidad*:<br/>
+                <input type="text" name="periodicidad" class="ingresar_periodicidad" placeholder="DIAS/MESES/AÑOS">
+                <div style="appearance: none; color: white; font-size: 0.7em; margin: 0.75em 1.5em;">
+                    *no completar campo en caso de ser donacion unica
+                </div>
+            </label>
+            
+            <button type="submit" id="continuar" class="continuar">Continuar</button>
+        </div>    
+    </div>
+
+</body>
+</html>
