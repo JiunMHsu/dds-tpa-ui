@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contribucion-Poner heladera</title>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css" rel="stylesheet" />
+    <link rel="stylesheet" href="poner_heladera.css" />
+</head>
+
+<body class="fondo">
+    <div class="container">
+        <div class="formulario-conainer-iz">
+            <label>Iconos</label>
+            <!--iconos-->
+        </div>
+        <div class="search-box">
+            <input type="text" id="search" placeholder="Buscar calle, número o ciudad...">
+            <button onclick="searchLocation()">Buscar</button>
+        </div>
+        <div id="map"></div>
+        <div class="formulario-conainer-1">
+            <div class="formulario">
+                <label for="titutlo" class="titulo"
+                    style="text-align: center; font-size: 20px; margin-bottom: 80px;">Puntos Recomendados</label>
+                <div class="general">
+                    <div class="campo">
+                        <label for="motivo">Latitud:</label>
+                        <input type="number" id="motivo" placeholder="0.00">
+                    </div>
+                    <div class="campo">
+                        <label for="motivo">Longitud:</label>
+                        <input type="number" id="motivo" placeholder="0.00">
+                    </div>
+                    <div class="campo">
+                        <label for="motivo">Radio:</label>
+                        <input type="numer" id="motivo" placeholder="0.00">
+                    </div>
+                </div>
+                <ul id="lista-resultados"></ul>
+                <div class="boton-continuar">
+                    <button type="button" id="continuar" class="continuar"
+                        onclick="actualizarLista()">Seleccionar</button>
+                </div>
+            </div>
+        </div>
+        <div class="formulario-conainer-2">
+            <div class="formulario">
+                <label for="titulo" class="titulo"
+                    style="text-align: center; font-size: 20px; margin-bottom: 80px;">Poner Heladera</label>
+                <div class="nombre">
+                    <label for="motivo">Ingresar nombre:</label>
+                    <input type="text" id="motivo" placeholder="Heladera Medrano UTN">
+                </div>
+                <div class="general">
+                    <div class="campos">
+                        <label for="motivo">Ingresar calle:</label>
+                        <input type="text" id="motivo" placeholder="Av.Rivadavia">
+                    </div>
+                    <div class="campos">
+                        <label for="motivo">Nro domicilio:</label>
+                        <input type="number" id="motivo" placeholder="0000">
+                    </div>
+                </div>
+                <div class="row auto justify-content-center">
+                    <div class="nombre">
+                        <label for="motivo">Seleccionar barrio:</label>
+                    </div>
+                    <select id="tipo" name="tipo" onchange="updateInput()">
+                        <option value="" disabled selected>Seleccionar</option>
+                        <option value="agronomia">Agronomia</option>
+                        <option value="almagro">Almagro</option>
+                        <option value="balvanera">Balvanera</option>
+                        <option value="barracas">Barracas</option>
+                    </select>
+                </div>
+                <div class="general">
+                    <div class="campos">
+                        <label for="motivo">Latitud:</label>
+                        <input type="number" id="motivo" placeholder="0.00">
+                    </div>
+                    <div class="campos">
+                        <label for="motivo">Longitud:</label>
+                        <input type="number" id="motivo" placeholder="0.00">
+                    </div>
+                </div>
+                <div class="nombre">
+                    <label for="motivo">Ingresar capacidad:</label>
+                    <input type="text" id="motivo" placeholder="Heladera Medrano UTN">
+                </div>
+                <div class="boton-continuar">
+                    <button type="submit" id="continuar" class="continuar">
+                        Continuar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js"></script>
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoibWVsaXNwIiwiYSI6ImNtMGZwbWg1dTEzajEyaW4zYzB2dGo5YzcifQ.67pRGcVLHmjrFSVzz3Hh9A';
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v11',
+            center: [-58.4370894, -34.6075682], // Coordenadas de Buenos Aires
+            zoom: 13
+        });
+        var marker;
+        var polygon;
+        function searchLocation() {
+            var location = document.getElementById('search').value;
+            fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${location}.json?access_token=${mapboxgl.accessToken}&country=AR`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.features.length > 0) {
+                        var feature = data.features[0];
+                        var lat = feature.center[1];
+                        var lon = feature.center[0];
+                        map.setCenter([lon, lat]);
+                        map.setZoom(14);
+
+                        // Eliminar el marcador anterior si existe
+                        if (marker) {
+                            marker.remove();
+                        }
+
+                        // Eliminar el polígono anterior si existe
+                        if (polygon) {
+                            map.removeLayer('polygon');
+                            map.removeSource('polygon');
+                        }
+
+                        // Verificar si es una dirección específica o una ciudad
+                        if (feature.place_type.includes('address')) {
+                            // Agregar un nuevo marcador en la ubicación encontrada
+                            marker = new mapboxgl.Marker()
+                                .setLngLat([lon, lat])
+                                .addTo(map);
+                        } else if (feature.place_type.includes('place')) {
+                            // Dibujar un polígono alrededor de la ciudad
+                            fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${location}.json?access_token=${mapboxgl.accessToken}&country=AR&types=place`)
+                                .then(response => response.json())
+                                .then(data => {
+                                    if (data.features.length > 0) {
+                                        var cityFeature = data.features[0];
+                                        if (cityFeature.geometry.type === 'Polygon' || cityFeature.geometry.type === 'MultiPolygon') {
+                                            map.addSource('polygon', {
+                                                'type': 'geojson',
+                                                'data': cityFeature.geometry
+                                            });
+
+                                            map.addLayer({
+                                                'id': 'polygon',
+                                                'type': 'line',
+                                                'source': 'polygon',
+                                                'layout': {},
+                                                'paint': {
+                                                    'line-color': '#FF0000',
+                                                    'line-width': 3
+                                                }
+                                            });
+                                        } else {
+                                            alert('No se encontraron límites de la ciudad para dibujar el polígono.');
+                                        }
+                                    }
+                                })
+                                .catch(error => console.error('Error:', error));
+                        }
+                    } else {
+                        alert('Ubicación no encontrada');
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+        }
+        function actualizarLista() {
+            const listaResultados = document.getElementById('lista-resultados');
+            listaResultados.innerHTML = ''; // Limpiar la lista antes de agregar nuevos elementos
+
+            // Simular la búsqueda de heladeras
+            const heladeras = ['Heladera 1', 'Heladera 2', 'Heladera 3'];
+
+            heladeras.forEach((heladera, index) => {
+                const li = document.createElement('li');
+                li.className = 'custom-checkbox';
+
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkbox.name = 'heladera';
+                checkbox.value = heladera;
+                checkbox.id = `heladera${index}`;
+
+                const label = document.createElement('label');
+                label.htmlFor = `heladera${index}`;
+                label.textContent = heladera;
+
+                li.appendChild(checkbox);
+                li.appendChild(label);
+                listaResultados.appendChild(li);
+            });
+        }
+    </script>
+</body>
+
+</html>
