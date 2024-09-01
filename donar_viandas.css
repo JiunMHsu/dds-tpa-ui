@@ -11,7 +11,7 @@
 }
 
 .mapa-con-fondo{
-    display: inline;
+    display: inline-block;
     margin: 0 .5rem;
     height: auto;
     width: auto;
@@ -23,15 +23,18 @@
 .mapa-con-fondo img{
     position: relative;
     height: inherit;
+    display: block;
     justify-content: center;
 }
 
 .formulario-conainer{
+    height: auto;
+    width: auto;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    display: flex;
+    display:block;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -40,7 +43,6 @@
     margin: 0 .5rem;
     border-radius: 1rem;
     text-align: center;
-    width: 40rem;
     gap: 1rem;
 }
 
@@ -111,21 +113,32 @@
 }
 
 .columna-izquierda {
+    flex-direction: column;
     background-color: #4F4F4F;
     display: flex;
     border-radius: 1rem;
     margin: 0 .5rem;
+    gap: 1rem;
     text-align: center;
     width: 6rem;
-    height: 100%;
+    height: auto;
 }
 
 .columna-izquierda a {
-    padding: auto auto;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: auto;
+    margin-top: auto;
     color: rgb(255, 255, 255);
     cursor: pointer;
     display: block;
-    position: relative;
-    max-width: 100px;
-    max-height: 85vh;
+    position: inherit;
+    min-width: none;
+    min-height: fit-content;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.columna-izquierda a:hover {
+    color: #26282b;
 }
