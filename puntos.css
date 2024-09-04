@@ -19,6 +19,12 @@
     margin-top: 15px;
     margin-bottom: 15px;
 }
+.formulario-container-iz img {
+    display: block;
+    margin: 10px auto; /* Centra los iconos verticalmente */
+    width: 24px; /* Ajusta el tamaño de los iconos */
+    height: 24px;
+}
 .formulario-conainer {
     width: 700px;
     margin-top: 15px;
