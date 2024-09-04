@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puntos</title>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css" rel="stylesheet" />
+    <link rel="stylesheet" href="puntos.css" />
+</head>
+
+<body class="fondo">
+    <div class="container">
+        <div class="formulario-conainer-iz">
+            <label>Iconos</label>
+            <!--iconos-->
+        </div>
+        <div class="formulario-conainer">
+            <div class="formulario">
+                <label for="titutlo" class="titulo"
+                    style="text-align: center; font-size: 20px; margin-bottom: 50px; margin-top: 60px;">Consultar
+                    servicios/productos ofrecidos</label>
+                <div class="general">
+                    <div class="campos">
+                        <label for="motivo">Por nombre:</label>
+                        <input type="text" id="nom" placeholder="Busca producto" oninput="buscarProductos()">
+                    </div>
+                    <div class="campos">
+                        <label for="motivo">Por rubro:</label>
+                        <select id="rubro" name="rubro" onchange="buscarProductos()">
+                            <option value="">Todos los rubros</option>
+                            <option value="Electrónica">Electrónica</option>
+                            <option value="Alimentos">Alimentos</option>
+                            <option value="Ropa">Ropa</option>
+                            <option value="Libros">Libros</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="lista-productos" class="scrollable-list"></div>
+            </div>
+        </div>
+        <div class=" formulario-conainer-1">
+            <div class="formulario">
+                <label for="titutlo" class="titulo"
+                    style="text-align: center; font-size: 20px; margin-bottom: 80px; margin-top: 20px;">Informacion
+                    del
+                    servicio/producto</label>
+                <div id="atributos-producto"></div>
+            </div>
+        </div>
+        <div class="formulario-conainer-2">
+            <div class="formulario">
+                <label for="titutlo" class="titulo"
+                    style="text-align: center; font-size: 20px; margin-bottom: 20px; margin-top: 20px;">Cantidad de
+                    puntos acumulados</label>
+                <div id="puntos" class="circulo"></div>
+                <label for="titutlo" class="titulo"
+                    style="text-align: center; font-size: 20px; margin-bottom: 5px; margin-top: 20px;">Servicios/Productos
+                    seleccionados</label>
+                <div id="lista-seleccionados" class="lista-seleccionados" style="display: none;"></div>
+                <div id="total-puntos-gastados" class="total-puntos"></div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+</body>
+<script>
+    const productosServicios = [
+        { nombre: 'Producto 1', rubro: 'Electrónica', imagen: 'imagenes/productos/producto1.jpeg', puntos: 30 },
+        { nombre: 'Producto 2', rubro: 'Alimentos', imagen: 'imagenes/productos/producto2.jpeg', puntos: 20 },
+        { nombre: 'Producto 3', rubro: 'Ropa', imagen: 'imagenes/productos/producto3.jpeg', puntos: 10 },
+        { nombre: 'Producto 4', rubro: 'Libros', imagen: 'imagenes/productos/producto4.jpeg', puntos: 5 }
+    ];
+    let puntosAcumulados = Math.floor(Math.random() * 100) + 1;
+    let puntosGastados = 0;
+    document.getElementById('puntos').innerText = puntosAcumulados;
+
+    function actualizarPuntos(index, checked) {
+        const producto = productosServicios[index];
+        if (checked) {
+            if (puntosAcumulados - producto.puntos >= 0) {
+                puntosAcumulados -= producto.puntos;
+                puntosGastados += producto.puntos;
+                document.getElementById('puntos').innerText = puntosAcumulados;
+                actualizarListaSeleccionados(producto, true);
+            } else {
+                alert('No tienes suficientes puntos para seleccionar este producto.');
+                document.getElementById(`producto-${index}`).checked = false;
+            }
+        } else {
+            puntosAcumulados += producto.puntos;
+            puntosGastados -= producto.puntos;
+            document.getElementById('puntos').innerText = puntosAcumulados;
+            actualizarListaSeleccionados(producto, false);
+        }
+        actualizarTotalPuntosGastados();
+    }
+
+    function actualizarListaSeleccionados(producto, agregar) {
+        const listaSeleccionados = document.getElementById('lista-seleccionados');
+        listaSeleccionados.style.display = 'block';
+        if (agregar) {
+            const item = document.createElement('div');
+            item.className = 'producto-seleccionado';
+            item.id = `seleccionado-${producto.nombre}`;
+            item.innerHTML = `
+            <img src="${producto.imagen}" alt="${producto.nombre}">
+            <div class="nombre-producto">${producto.nombre}</div>
+        `;
+            listaSeleccionados.appendChild(item);
+        } else {
+            const item = document.getElementById(`seleccionado-${producto.nombre}`);
+            if (item) {
+                listaSeleccionados.removeChild(item);
+            }
+        }
+    }
+
+    function actualizarTotalPuntosGastados() {
+        const totalPuntosGastados = document.getElementById('total-puntos-gastados');
+        totalPuntosGastados.innerText = `Total de puntos gastados: ${puntosGastados}`;
+        totalPuntosGastados.style.display = puntosGastados > 0 ? 'block' : 'none';
+    }
+
+    function mostrarAtributos(index) {
+        const producto = productosServicios[index];
+        const atributosProducto = document.getElementById('atributos-producto');
+        atributosProducto.innerHTML = `
+        <div class="producto">
+            <img src="${producto.imagen}" alt="${producto.nombre}" class="imagen-producto">
+            <div class="nombre-producto">${producto.nombre}</div>
+            <div class="atributo">Rubro: ${producto.rubro}</div>
+            <div class="atributo">Puntos: ${producto.puntos}</div>
+        </div>
+    `;
+    }
+
+    function buscarProductos() {
+        const nombre = document.getElementById('nom').value.toLowerCase();
+        const rubro = document.getElementById('rubro').value;
+        const listaProductos = document.getElementById('lista-productos');
+        listaProductos.innerHTML = '';
+
+        productosServicios.forEach((producto, index) => {
+            const nombreCoincide = nombre === '' || producto.nombre.toLowerCase().includes(nombre);
+            const rubroCoincide = rubro === '' || producto.rubro === rubro;
+
+            if ((nombre === '' && rubroCoincide) || (rubro === '' && nombreCoincide) || (nombreCoincide && rubroCoincide)) {
+                listaProductos.innerHTML += `
+                <div class="custom-checkbox">
+                    <input type="checkbox" id="producto-${index}" onclick="actualizarPuntos(${index}, this.checked); mostrarAtributos(${index});">
+                    <label for="producto-${index}">${producto.nombre}</label>
+                </div>
+            `;
+            }
+        });
+    }
+
+
+</script>
+
+</html>

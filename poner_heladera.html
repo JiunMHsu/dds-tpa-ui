@@ -26,22 +26,22 @@
                     style="text-align: center; font-size: 20px; margin-bottom: 80px;">Puntos Recomendados</label>
                 <div class="general">
                     <div class="campo">
-                        <label for="motivo">Latitud:</label>
-                        <input type="number" id="motivo" placeholder="0.00">
+                        <label for="latitud">Latitud:</label>
+                        <input type="number" id="latitud" placeholder="0.00">
                     </div>
                     <div class="campo">
-                        <label for="motivo">Longitud:</label>
-                        <input type="number" id="motivo" placeholder="0.00">
+                        <label for="longitud">Longitud:</label>
+                        <input type="number" id="longitud" placeholder="0.00">
                     </div>
                     <div class="campo">
-                        <label for="motivo">Radio:</label>
-                        <input type="numer" id="motivo" placeholder="0.00">
+                        <label for="radio">Radio:</label>
+                        <input type="numer" id="radio" placeholder="0.00">
                     </div>
                 </div>
-                <ul id="lista-resultados"></ul>
+                <ul id="lista-resultados" class="scrollable-list"></ul>
                 <div class="boton-continuar">
                     <button type="button" id="continuar" class="continuar"
-                        onclick="actualizarLista()">Seleccionar</button>
+                        onclick="seleccionarPuntos()">Seleccionar</button>
                 </div>
             </div>
         </div>
@@ -173,32 +173,42 @@
                 })
                 .catch(error => console.error('Error:', error));
         }
-        function actualizarLista() {
-            const listaResultados = document.getElementById('lista-resultados');
-            listaResultados.innerHTML = ''; // Limpiar la lista antes de agregar nuevos elementos
 
-            // Simular la búsqueda de heladeras
-            const heladeras = ['Heladera 1', 'Heladera 2', 'Heladera 3'];
+        function actualizarLista() {
+            const lista = document.getElementById('lista-resultados');
+            lista.innerHTML = ''; // Limpiar la lista
+            const heladeras = ['Heladera 1', 'Heladera 2', 'Heladera 3', 'Heladera 4', 'Heladera 5'];
 
             heladeras.forEach((heladera, index) => {
                 const li = document.createElement('li');
-                li.className = 'custom-checkbox';
+                li.classList.add('custom-checkbox');
 
                 const checkbox = document.createElement('input');
                 checkbox.type = 'checkbox';
-                checkbox.name = 'heladera';
-                checkbox.value = heladera;
-                checkbox.id = `heladera${index}`;
+                checkbox.id = `checkbox-${index}`;
 
                 const label = document.createElement('label');
-                label.htmlFor = `heladera${index}`;
+                label.htmlFor = `checkbox-${index}`;
                 label.textContent = heladera;
 
                 li.appendChild(checkbox);
                 li.appendChild(label);
-                listaResultados.appendChild(li);
+                lista.appendChild(li);
             });
         }
+
+        function seleccionarPuntos() {
+            const seleccionados = document.querySelectorAll('#lista-resultados input[type="checkbox"]:checked');
+            seleccionados.forEach(item => {
+                console.log('Heladera seleccionada:', item.nextElementSibling.textContent);
+                // Aquí puedes agregar la lógica para manejar las heladeras seleccionadas
+            });
+        }
+
+        // Llamar a actualizarLista cuando se cambian los valores de latitud, longitud o radio
+        document.getElementById('latitud').addEventListener('input', actualizarLista);
+        document.getElementById('longitud').addEventListener('input', actualizarLista);
+        document.getElementById('radio').addEventListener('input', actualizarLista);
     </script>
 </body>
 

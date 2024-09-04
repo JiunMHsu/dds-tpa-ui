@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario</title>
+    <link rel="stylesheet" href="usuario.css">
+</head>
+
+<body class="fondo">
+    <div class="container">
+        <div class="formulario-conainer-iz">
+            <label>Iconos</label>
+            <!--iconos-->
+        </div>
+        <h1><span id="nombreApellido"></span></h1>
+        <h2><span id="tipoContribuidor"></span></h2>
+        <div class="formulario-conainer">
+            <div class="general">
+                <div class="formulario-conainer-1">
+                    <div class="personal-info">
+                        <h3>Información Personal</h3>
+                        <p><strong>Nombre y Apellido:</strong> <span id="nombreApellido"></span></p>
+                        <p><strong>Dirección:</strong> <span id="direccion"></span></p>
+                        <p><strong>Fecha de Nacimiento:</strong> <span id="fechaNacimiento"></span></p>
+                        <p><strong>Medio de Contacto:</strong> <span id="medioDeContacto"></span></p>
+                        <p><strong>Detalles de Contacto:</strong> <span id="detalleMedio"></span></p>
+                    </div>
+                </div>
+                <div class="formulario-conainer-2">
+                    <div class="contributions">
+                        <h2>Tipos de Contribución</h2>
+                        <select id="contribution-types" class="scrollable-list" multiple>
+
+                        </select>
+                    </div>
+
+                    <div class="user-contributions">
+                        <h2>Colaboraciones del Usuario</h2>
+                        <ul id="user-contributions-list" class="scrollable-list">
+                            <!-- -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+<script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const userType = localStorage.getItem('userType');
+        const humanaData = JSON.parse(localStorage.getItem('humanaData'));
+        const juridicaData = JSON.parse(localStorage.getItem('juridicaData'));
+
+        if (userType === 'humana' && humanaData) {
+            document.getElementById('nombreApellido').textContent = `${humanaData.nombre} ${humanaData.apellido}`;
+            document.getElementById('direccion').textContent = humanaData.direccion;
+            document.getElementById('fechaNacimiento').textContent = humanaData.fechaNacimiento;
+            document.getElementById('medioDeContacto').textContent = humanaData.medioDeContacto;
+            document.getElementById('detalleMedio').textContent = humanaData.detalleMedio;
+            document.getElementById('tipoContribuidor').textContent = 'Humana';
+        } else if (userType === 'juridica' && juridicaData) {
+            document.getElementById('nombreApellido').textContent = juridicaData.razonSocial;
+            document.getElementById('direccion').textContent = juridicaData.direccion;
+            document.getElementById('fechaNacimiento').textContent = 'N/A';
+            document.getElementById('medioDeContacto').textContent = juridicaData.medioDeContacto;
+            document.getElementById('detalleMedio').textContent = juridicaData.detalleMedio;
+            document.getElementById('tipoContribuidor').textContent = 'Jurídica';
+        }
+
+        const contributionTypes = {
+            humana: ['Donar dinero', 'Donar viandas', 'Distribuir viandas', 'Entregar viandas', 'Repartir tarjetas'],
+            juridica: ['Hacerse cargo de heladera/s', 'Donar dinero']
+        };
+
+        const select = document.getElementById('contribution-types');
+        contributionTypes[userType].forEach(type => {
+            const option = document.createElement('option');
+            option.value = type.toLowerCase().replace(/ /g, '-');
+            option.textContent = type;
+            select.appendChild(option);
+        });
+
+        document.getElementById('add-contribution').addEventListener('click', function () {
+            const selectedTypes = Array.from(select.selectedOptions).map(option => option.textContent);
+            const contributionsList = document.getElementById('user-contributions-list');
+            selectedTypes.forEach(type => {
+                const li = document.createElement('li');
+                li.textContent = type;
+                contributionsList.appendChild(li);
+            });
+
+            const contributions = JSON.parse(localStorage.getItem('contributions')) || [];
+            contributions.push(...selectedTypes);
+            localStorage.setItem('contributions', JSON.stringify(contributions));
+        });
+
+        const savedContributions = JSON.parse(localStorage.getItem('contributions')) || [];
+        const contributionsList = document.getElementById('user-contributions-list');
+        savedContributions.forEach(contribution => {
+            const li = document.createElement('li');
+            li.textContent = contribution;
+            contributionsList.appendChild(li);
+        });
+    });
+
+
+</script>
+
+</html>

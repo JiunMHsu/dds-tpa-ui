@@ -89,5 +89,26 @@
     </div>
 
 </body>
+<script>
+    document.getElementById('formulario').addEventListener('submit', function (event) {
+        event.preventDefault();
+        const razonSocial = document.getElementById('razonSocial').value;
+        const tipo = document.getElementById('tipo').value;
+        const medioDeContacto = document.getElementById('medioDeContacto').value;
+        const detalleMedio = document.getElementById('detalleMedio').value;
+        const direccion = document.getElementById('direccion').value;
+
+        const juridicaData = {
+            razonSocial,
+            tipo,
+            medioDeContacto,
+            detalleMedio,
+            direccion
+        };
+
+        localStorage.setItem('juridicaData', JSON.stringify(juridicaData));
+        window.location.href = 'perfil_usuario.html';
+    });
+</script>
 
 </html>

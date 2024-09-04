@@ -1,0 +1,102 @@
+.fondo {
+    background-color: rgba(44, 44, 44, 1);
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+}
+.formulario-conainer-iz {
+    background-color: rgba(103, 103, 103, 1);
+    border-radius: 1rem;
+    padding: 2em;
+    text-align: center;
+    /*left: 1240px;*/
+    width: 40px;
+    height: 570px;
+    margin-left: 15px; /* Espacio entre el formulario y el mapa */
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.formulario-conainer {
+    width: 1340px;
+    height: 635px;
+    margin-top: 15px;
+    margin-bottom:15px;
+    border-radius: 1rem;
+    margin-left: 20px;
+    background-color: rgba(103, 103, 103, 1);
+}
+.notifications-page {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*justify-content: center;*/
+    height: 100vh;
+    text-align: center;
+}
+
+.notifications-page input[type="search"] {
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 0px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    margin-right: 300px;
+    height: 30px;
+}
+
+
+.notifications-page h2 {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-size: 40px;
+    color:aliceblue;
+}
+
+.notification-list {
+    list-style-type: none;
+    padding: 0;
+    max-width: 600px;
+    margin-right: 300px;
+    margin-top: 0px;
+}
+.general {
+    margin-left: 40px;
+    width: 600px;
+    margin-top: 8px;
+}
+.notification-item {
+    display: flex;
+    align-items: center;
+    /*justify-content: center;*/
+    width:  600px;
+    padding: 5px;
+    border-bottom: 1px solid #7c7c7c;
+    background-color: rgb(64, 64, 64); 
+}
+
+.notification-item .icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #d1d1d1;
+    color: white;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 2.5px;
+    margin-bottom: 2.5px;
+}
+
+.notification-item p {
+    margin: 0;
+    color: #ccc;
+    font-family: Arial;
+    font-size: 14px;
+}
