@@ -59,33 +59,6 @@
     margin-bottom: 1em;
 }
 
-.ingresar_monto{
-    appearance: none;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    padding: 10px;
-    background-color: #fff;
-    font-size: 16px;
-    color: #333;
-    cursor: pointer;
-    width: 35rem;
-    transition: border-color 0.2s, background-color 0.2s;
-}
-
-.ingresar_periodicidad{
-    appearance: none;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    padding: 10px;
-    background-color: #fff;
-    font-size: 16px;
-    color: #333;
-    cursor: pointer;
-    width: 35rem;
-    transition: border-color 0.2s, background-color 0.2s;
-}
-
-
 .columna-izquierda {
     flex-direction: column;
     background-color: #4F4F4F;
@@ -116,4 +89,56 @@
 
 .columna-izquierda a:hover {
     color: #26282b;
+}
+
+.ingresar_nombre{
+    appearance: none;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: #fff;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    width: 35rem;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+.ingresar_cantpuntos{
+    appearance: none;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: #fff;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    width: 35rem;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+.ingresar_rubro{
+    appearance: none;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: #fff;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    width: 35rem;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+.adjuntar_imagen{
+    appearance: none;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: #fff;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    width: 35rem;
+    transition: border-color 0.2s, background-color 0.2s;
 }

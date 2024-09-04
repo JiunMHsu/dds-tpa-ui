@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="personavulnerable.css"/>
+</head>
+
+<body class = "fondo">
+    <div class="columna-izquierda">
+        <a href="#">
+            <i class="fa-solid fa-person"></i> <br>
+            <span span style="font-weight: bold;">Persona Sit Vulnerable</span> <br>
+        </a>
+        <a href="#">
+            <i class="fa-regular fa-pen-to-square"></i> <br>
+            <span span>Reportar Fallas</span> 
+        </a>
+        <a href="#">
+            <i class="fa-regular fa-file"></i> <br>
+            <span span>Reportes</span>
+        </a>
+        <a href="#">
+            <i class="fa-regular fa-bell"></i> <br>
+            <span span>Notificacion</span>
+        </a>
+        <a href="#">
+            <i class="fa-solid fa-snowflake"></i> <br>
+            <span span>Heladeras</span>
+        </a>
+        <a href="#">
+            <i class="fa-solid fa-gift"></i> <br>
+            <span span>Puntos</span>
+        </a>
+        <a href="#">
+            <i class="fa-regular fa-user"></i> <br>
+            <span span>Perfil</span>
+        </a>
+        <a href="#">
+            <i class="fa-solid fa-house"></i> <br>
+            <span span>Home</span>
+        </a>
+    </div>
+
+    <div class = "mapa-con-fondo">
+        <img src = "imagenes/Map.png" alt = ""/>
+        <div class = "formulario-conainer">
+            <span style="appearance: none; color: white; font-size: 1.3em; margin: 0.75em 1.5em;"> 
+                Registrar persona en situación vulnerable 
+            </span> <br>
+            <label style= "appearance: none; color: white; font-size: 1.0em; margin: 0.75em 1.5em; text-align: start;">
+                Ingresar nombre: <br/>
+                <input type="text" name ="nombre" class ="ingresar_nombre" placeholder="Soria López...">
+            </label>
+           
+        <div class = "identificacion">
+            <label style="appearance: none; color: white; font-size: 1.0em; margin: 0.75em 1.5em; text-align: start;">
+                 Tipo de documento*: <br/>
+                <select id="opciones" name="tdocumento" class="custom-select">
+                    <option value="opcion1">CUIL</option>
+                    <option value="opcion2">DNI</option>
+                </select>            
+            </label>
+            <label style="appearance: none; color: white; font-size: 1.0em; margin: 0.75em 1.5em; text-align: start;">
+                 Nro de documento*: <br/>
+                <input type="number" name="ndocumento" class="ingresar_nrodocumento" placeholder="00000000" min="0">
+            </label>
+            <div style="appearance: none; color: white; font-size: 0.7em; margin: 0.25em 1.5em; text-align: end;">
+                *si es que posee
+            </div>
+        </div>    
+        
+        <label style="appearance: none; color: white; font-size: 1.0em; margin: 0.75em 1.5em; text-align: start;">
+            Ingresar fecha de nacimiento: <br/>
+            <input type="date" name ="fechanacimiento" class ="fecha_nacimiento" placeholder="DIA/MES/AÑO" min="0">
+        </label>
+
+        <div class="domicilio">
+            <label style="appearance: none; color: white; font-size: 1.0em; margin: 0.75em 1.5em; text-align: start;">
+                Ingresar calle: <br/>
+                <input type="text" name ="calle" class ="calle" placeholder="Av.Rivadavia">
+            </label>
+            <label style="appearance: none; color: white; font-size: 1.0em; margin: 0.75em 1.5em; text-align: start;">
+                Nro domicilio*: <br/>
+                <input type="number" name ="nrodomicilio" class ="nrodomicilio" placeholder="00000" min="0">
+            </label>
+            <div style="appearance: none; color: white; font-size: 0.7em; margin: 0.25em 1.5em; text-align:end;">
+                *no completar en caso de estar en situacion de calle
+            </div>
+        </div>
+        
+        <label style="appearance: none; color: white; font-size: 1.0em; margin: 0.75em 1.5em; text-align: start;">
+            Ingresar barrio: <br/>
+            <input type="text" name ="barrio" class ="ingresar_barrio" placeholder="Flores">
+        </label>
+
+        <label style="appearance: none; color: white; font-size: 1.0em; margin: 0.75em 1.5em; text-align: start;">
+            Ingresar cantidad de menores a cargo: <br/>
+            <input type="number" name ="menores" class ="ingresar_menores_acargo" placeholder="0" min="0">
+        </label>
+
+            <button type="submit" id="continuar" class="continuar">Continuar</button>
+      </div>    
+    </div>
+
+</body>
+</html>

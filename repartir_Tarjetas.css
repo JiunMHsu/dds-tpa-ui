@@ -41,6 +41,7 @@
     border-radius: 1rem;
     text-align: left;
     width: 40rem;
+    justify-content: center;
     gap: 1rem;
 }
 
@@ -58,33 +59,6 @@
     font-weight: bold;
     margin-bottom: 1em;
 }
-
-.ingresar_monto{
-    appearance: none;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    padding: 10px;
-    background-color: #fff;
-    font-size: 16px;
-    color: #333;
-    cursor: pointer;
-    width: 35rem;
-    transition: border-color 0.2s, background-color 0.2s;
-}
-
-.ingresar_periodicidad{
-    appearance: none;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    padding: 10px;
-    background-color: #fff;
-    font-size: 16px;
-    color: #333;
-    cursor: pointer;
-    width: 35rem;
-    transition: border-color 0.2s, background-color 0.2s;
-}
-
 
 .columna-izquierda {
     flex-direction: column;
@@ -116,4 +90,28 @@
 
 .columna-izquierda a:hover {
     color: #26282b;
+}
+
+.custom-select {
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: #fff;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    width: 35rem;
+    max-width: 100%;
+    min-width: 100%;
+}
+
+.custom-select:focus {
+    border-color: #2196F3;
+    outline: none;
+}
+
+.custom-select::after {
+    content: "▼";
+    pointer-events: none;
+    color: #333;
 }

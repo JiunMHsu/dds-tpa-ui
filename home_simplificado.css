@@ -26,7 +26,6 @@
     justify-content: center;
 }
 
-/* !! */
 .formulario-conainer {
     display: flex;
     flex-direction: column;
@@ -88,23 +87,34 @@
     color: #333;
 }
 
-/* !! */
 .columna-izquierda {
+    flex-direction: column;
     background-color: #4F4F4F;
     display: flex;
     border-radius: 1rem;
     margin: 0 .5rem;
+    gap: 1rem;
     text-align: center;
     width: 6rem;
-    height: 100%;
+    max-width: 100%;
+    height: auto;
 }
 
 .columna-izquierda a {
-    padding: 10px auto;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: auto;
+    margin-top: auto;
     color: rgb(255, 255, 255);
     cursor: pointer;
     display: block;
-    position: relative;
-    max-width: 100px;
-    max-height: 85vh;
+    position: inherit;
+    min-width: none;
+    min-height: fit-content;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.columna-izquierda a:hover {
+    color: #26282b;
 }

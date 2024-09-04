@@ -1,0 +1,215 @@
+.fondo{
+    box-sizing: border-box;
+    appearance: none;
+    height: 99vh;
+    width: 100vw;
+    align-content: center;
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(44, 44, 44, 1);
+    padding: 1rem;
+}
+
+.mapa-con-fondo{
+    display: inline;
+    margin: 0 .5rem;
+    height: auto;
+    width: auto;
+    border-radius: 1rem;
+    overflow: hidden;
+    object-fit: cover;
+}
+.mapa-con-fondo img {
+    position: relative;
+    height: inherit;
+    justify-content: center;
+}
+
+.formulario-conainer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 3rem;
+    background-color: #4F4F4F;
+    margin: 0 .5rem;
+    border-radius: 1rem;
+    text-align: left;
+    min-height: fit-content;
+    max-height: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
+    gap: 1rem;
+}
+
+.continuar {
+    text-align: center;
+    background-color: #D4A15C;
+    border: none;
+    border-radius: 99px;
+    color: #644a26;
+    font-size: 1em;
+    padding: 0.75em 1.5em;
+    cursor: pointer;
+    width: 15rem;
+    margin-top: 1em;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+.columna-izquierda {
+    flex-direction: column;
+    background-color: #4F4F4F;
+    display: flex;
+    border-radius: 1rem;
+    margin: 0 .5rem;
+    gap: 1rem;
+    text-align: center;
+    width: 6rem;
+    max-width: 100%;
+    height: auto;
+}
+
+.columna-izquierda a {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: auto;
+    margin-top: auto;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    display: block;
+    position: inherit;
+    min-width: none;
+    min-height: fit-content;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.columna-izquierda a:hover {
+    color: #26282b;
+}
+
+.custom-select {
+    appearance: none;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: #fff;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    width: 100%;
+    height: auto;   
+    max-width: 400px;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+.custom-select:focus {
+    border-color: #2196F3;
+    outline: none;
+}
+
+.custom-select::after {
+    content: "▼";
+    pointer-events: none;
+    color: #333;
+}
+
+/*cada caja de informacion*/
+.ingresar_nombre{
+    appearance: none;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: #fff;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    width: 35rem;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+.ingresar_nrodocumento{
+    appearance: none;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: #fff;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    width: auto;
+    height: fit-content;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+.fecha_nacimiento{
+    appearance: none;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: #fff;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    width: 35rem;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+.calle{
+    appearance: none;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: #fff;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    width: auto;
+    height: fit-content;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+.nrodomicilio{
+    appearance: none;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: #fff;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    width: auto;
+    height: fit-content;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+.ingresar_barrio{
+    appearance: none;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: #fff;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    width: 35rem;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+.ingresar_menores_acargo{
+    appearance: none;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: #fff;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    width: 35rem;
+    transition: border-color 0.2s, background-color 0.2s;
+}
