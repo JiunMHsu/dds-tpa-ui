@@ -4,69 +4,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
-    rel="stylesheet"
-    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
+    <title>Donar dinero</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="donar_dinero.css" />
 </head>
 
-<body class = "fondo">
-    <div class="columna-izquierda">
-        <a href="#">
-            <i class="fa-solid fa-person"></i> <br>
-            <span span>Persona Sit Vulnerable</span> <br>
-        </a>
-        <a href="#">
-            <i class="fa-regular fa-pen-to-square"></i> <br>
-            <span span>Reportar Fallas</span> 
-        </a>
-        <a href="#">
-            <i class="fa-regular fa-file"></i> <br>
-            <span span>Reportes</span>
-        </a>
-        <a href="#">
-            <i class="fa-regular fa-bell"></i> <br>
-            <span span>Notificacion</span>
-        </a>
-        <a href="#">
-            <i class="fa-solid fa-snowflake"></i> <br>
-            <span span>Heladeras</span>
-        </a>
-        <a href="#">
-            <i class="fa-solid fa-gift"></i> <br>
-            <span span>Puntos</span>
-        </a>
-        <a href="#">
-            <i class="fa-regular fa-user"></i> <br>
-            <span span>Perfil</span>
-        </a>
-        <a href="#">
-            <i class="fa-solid fa-house"></i> <br>
-            <span span>Home</span>
-        </a>
-    </div>
+<body class="fondo">
+    <div class="container">
+        <div class="formulario-conainer-iz">
+            <div class="menu">
+                <a href="persona_vulnerable.html">
+                    <img src="icons/ghost-svgrepo-com.svg" class="img" alt="Persona-sit-vulnerable">
+                    <label>Persona Sit. Vulnerable</label>
+                </a>
+            </div>
+            <div class="menu">
+                <a href="fallas_tecnicas_reportar.html">
+                    <img src="icons/shield-warning-svgrepo-com.svg" class="img" alt="Reportar Fallas">
+                    <label>Reportar Fallas</label>
+                </a>
+            </div>
+            <div class="menu">
+                <a href="reportes.html">
+                    <img src="icons/file-text-svgrepo-com.svg" class="img" alt="Reportes">
+                    <label>Reportes</label>
+                </a>
+            </div>
+            <div class="menu">
+                <a href="notificacion.html">
+                    <img src="icons/notification-unread-svgrepo-com.svg" class="img" alt="Notificacion">
+                    <label>Notificacion</label>
+                </a>
+            </div>
+            <div class="menu">
+                <a href="suscripcion_heladeras.css">
+                    <img src="icons/fridge-svgrepo-com.svg" class="img" alt="Heladeras">
+                    <label>Heladeras</label>
+                </a>
+            </div>
+            <div class="menu">
+                <a href="puntos.html">
+                    <img src="icons/gift-svgrepo-com.svg" class="img" alt="Puntos">
+                    <label>Puntos</label>
+                </a>
+            </div>
+            <div class="menu">
+                <a href="usuario.html">
+                    <img src="icons/user-circle-svgrepo-com.svg" class="img" alt="Perfil">
+                    <label>Perfil</label>
+                </a>
+            </div>
+            <div class="menus">
+                <a href="home.html">
+                    <img src="icons/home-svgrepo-com.svg" class="img" alt="Home">
+                    <label>Home</label>
+                </a>
+            </div>
+        </div>
+        <div class="mapa-con-fondo">
+            <div class="formulario-conainer" id="formulario-conainer">
+                <form action="" class="formulario" id="formulario">
+                    <label for="titutlo" class="titulo"
+                        style="text-align: center; font-size: 20px; margin-bottom: 40px; margin-top: 30px;">Donar
+                        Dinero</label>
+                    <div class="campo">
+                        <label for="cantidad">Ingresar monto:</label>
+                        <input type="number" id="monto" name="monto" required placeholder="$" class="inputs" />
+                    </div>
+                    <div class="campo">
+                        <label for="cantidad">Ingresar periocidad:</label>
+                        <input type="text" id="periodicidad" name="periodicidad" required placeholder="dias/meses/anos"
+                            class="inputs" />
+                    </div>
+                </form>
 
-    <div class = "mapa-con-fondo">
-        <img src = "imagenes/Map.png" alt = ""/>
-        <div class = "formulario-conainer">
-            <span style="appearance: none; color: white; font-size: 1.3em; margin: 0.75em 1.5em;"> 
-                Donar Dinero 
-            </span> <br>
-            <label style="appearance: none; color: white; font-size: 1.0em; margin: 0.75em 1.5em;">
-                Ingresar monto <br/>
-                <input type="number" name ="monto" class ="ingresar_monto" placeholder="$..." min="0">
-                </label>
-            <label style="appearance: none; color: white; font-size: 1.0em; margin: 0.75em 1.5em;"> Ingresar periodicidad*:<br/>
-                <input type="text" name="periodicidad" class="ingresar_periodicidad" placeholder="DIAS/MESES/AÑOS">
-                <div style="appearance: none; color: white; font-size: 0.7em; margin: 0.75em 1.5em;">
-                    *no completar campo en caso de ser donacion unica
-                </div>
-            </label>
-            
-            <button type="submit" id="continuar" class="continuar">Continuar</button>
-        </div>    
+                <button type="submit" id="continuar" class="continuar">Continuar</button>
+
+            </div>
+        </div>
+
     </div>
 
 </body>
+
 </html>

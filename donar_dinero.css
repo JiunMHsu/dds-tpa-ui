@@ -1,29 +1,57 @@
-.fondo{
-    box-sizing: border-box;
-    appearance: none;
-    height: 99vh;
-    width: 100vw;
-    align-content: center;
-    display: flex;
-    flex-direction: row;
+.fondo {
     background-color: rgba(44, 44, 44, 1);
-    padding: 1rem;
 }
 
-.mapa-con-fondo{
-    display: inline;
-    margin: 0 .5rem;
-    height: auto;
-    width: auto;
+.container {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+}
+.formulario-conainer-iz {
+    background-color: rgba(103, 103, 103, 1);
     border-radius: 1rem;
-    overflow: hidden;
-    object-fit: cover;
+    padding: 2em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 570px;
+    margin-left: 15px; /* Espacio entre el formulario y el mapa */
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.img {
+    margin: 0px 0px; 
+    width: 35px; 
+    height: 35px;
+    margin-bottom: 0px;
+}
+.menu a {
+    text-decoration: none; 
+    color: inherit; 
+    margin: 0px 0px;
 }
 
-.mapa-con-fondo img{
-    position: relative;
-    height: inherit;
-    justify-content: center;
+.menu label {
+    display: block;
+    text-align: center;
+    color:bisque; 
+    font-size: 10px;
+    font-family: 'Raleway', sans-serif;
+    margin: 0px 0px;
+    width: 80px;
+    margin-bottom: 15px;
+}
+.menus label {
+    display: block;
+    text-align: center;
+    color:bisque; 
+    font-size: 10px;
+    font-family: 'Raleway', sans-serif;
+    margin: 0px 0px;
+    width: 80px;
 }
 
 .formulario-conainer{
@@ -36,11 +64,11 @@
     align-items: center;
     justify-content: center;
     padding: 0 3rem;
-    background-color: #4F4F4F;
+    background-color: rgba(103, 103, 103, 1);
     margin: 0 .5rem;
     border-radius: 1rem;
     text-align: center;
-    width: 40rem;
+    width: 500px;
     gap: 1rem;
 }
 
@@ -56,64 +84,51 @@
     width: 15rem;
     margin-top: 1em;
     font-weight: bold;
-    margin-bottom: 1em;
+    margin-bottom: 30px;
 }
 
-.ingresar_monto{
-    appearance: none;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    padding: 10px;
-    background-color: #fff;
-    font-size: 16px;
-    color: #333;
-    cursor: pointer;
-    width: 35rem;
-    transition: border-color 0.2s, background-color 0.2s;
+.mapa-con-fondo {
+    width: 1340px;
+    height: 625px;
+    background-image: url('imagenes/Map.png');
+    background-size: cover;
+    border-radius: 10px; 
+    margin-top: 15px;
+    margin-bottom:15px;
+    margin-left: 20px;
+    z-index: 1;
 }
-
-.ingresar_periodicidad{
-    appearance: none;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    padding: 10px;
-    background-color: #fff;
-    font-size: 16px;
-    color: #333;
-    cursor: pointer;
-    width: 35rem;
-    transition: border-color 0.2s, background-color 0.2s;
-}
-
-
-.columna-izquierda {
-    flex-direction: column;
-    background-color: #4F4F4F;
+.formulario {
     display: flex;
-    border-radius: 1rem;
-    margin: 0 .5rem;
-    gap: 1rem;
-    text-align: center;
-    width: 6rem;
-    max-width: 100%;
-    height: auto;
-}
-
-.columna-izquierda a {
     flex-direction: column;
-    align-items: center;
-    margin-bottom: auto;
-    margin-top: auto;
-    color: rgb(255, 255, 255);
-    cursor: pointer;
-    display: block;
-    position: inherit;
-    min-width: none;
-    min-height: fit-content;
-    max-height: 100%;
-    max-width: 100%;
+    width: 100%;
 }
 
-.columna-izquierda a:hover {
-    color: #26282b;
+.formulario label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+    color: #ebeaea;
+}
+
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 0.5em;
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+}
+.inputs {
+    background-color: #FFFFFF;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 0.5em;
+    margin: 0.5em 0;
+    width: 300px;
+}
+
+.formulario-conainer label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+    color: #ebeaea;
 }
