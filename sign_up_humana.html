@@ -92,6 +92,40 @@
       }
 
     </script>
+    <script>
+      function updateInput() {
+        const medioDeContacto = document.getElementById("medioDeContacto");
+        const detalleMedio = document.getElementById("detalleMedio");
+
+        if (medioDeContacto.value === "whatsapp") {
+          detalleMedio.value = "+54 9";
+        } else {
+          detalleMedio.value = "";
+        }
+      }
+
+      document.getElementById('formulario').addEventListener('submit', function (event) {
+        event.preventDefault();
+        const nombre = document.getElementById('nombre').value;
+        const apellido = document.getElementById('apellido').value;
+        const fechaNacimiento = document.getElementById('fechaNacimiento').value;
+        const direccion = document.getElementById('direccion').value;
+        const medioDeContacto = document.getElementById('medioDeContacto').value;
+        const detalleMedio = document.getElementById('detalleMedio').value;
+
+        const humanaData = {
+          nombre,
+          apellido,
+          fechaNacimiento,
+          direccion,
+          medioDeContacto,
+          detalleMedio
+        };
+
+        localStorage.setItem('humanaData', JSON.stringify(humanaData));
+        window.location.href = 'perfil_usuario.html';
+      });
+    </script>
   </div>
 
 </body>

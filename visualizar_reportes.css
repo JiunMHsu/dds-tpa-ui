@@ -1,0 +1,74 @@
+.fondo {
+    background-color: rgba(44, 44, 44, 1);
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+.formulario-conainer-iz {
+    background-color: rgba(103, 103, 103, 1);
+    border-radius: 1rem;
+    padding: 2em;
+    text-align: center;
+    /*left: 1240px;*/
+    width: 40px;
+    height: 570px;
+    margin-left: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.formulario-conainer {
+    width: 1340px;
+    height: 635px;
+    margin-top: 15px;
+    margin-bottom:15px;
+    border-radius: 1rem;
+    margin-left: 20px;
+    background-color: rgba(103, 103, 103, 1);
+}
+
+.formulario-conainer h1 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 30px;
+    color:aliceblue;
+    align-items: center;
+    text-align: center;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 10px;
+    background-color: #f4f4f4;
+}
+.container2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 50px;
+}
+.card {
+    display: flex;
+    align-items: flex-start;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.card h3 {
+    margin-top: 0;
+    margin-bottom: 0px;
+    font-size: 20px;
+}
+.card-img {
+    width: 100px; /* Ajusta el tamaño según tus necesidades */
+    height: 100px;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+.card-content {
+    display: flex;
+    flex-direction: column;
+    /*justify-content: center;*/
+}
