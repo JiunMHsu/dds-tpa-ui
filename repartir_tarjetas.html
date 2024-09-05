@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donar Viandas</title>
+    <title>Repartir tarjetas Tarjeta</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="donar_viandas.css" />
+    <link rel="stylesheet" href="repartir_tarjetas.css" />
 </head>
 
 <body class="fondo">
@@ -65,27 +65,21 @@
             <div class="formulario-conainer" id="formulario-conainer">
                 <form action="" class="formulario" id="formulario">
                     <label for="titutlo" class="titulo"
-                        style="text-align: center; font-size: 20px; margin-bottom: 40px; margin-top: 30px;">Donar
-                        Vinda</label>
-                    <div class="campo">
-                        <label for="cantidad">Ingresar nombre de la comida:</label>
-                        <input type="text" id="comida" name="comida" required placeholder="Guiso.." class="inputs" />
+                        style="text-align: center; font-size: 20px; margin-bottom: 40px; margin-top: 30px;">Ofrecer
+                        servicio/producto</label>
+                    <div class="row auto justify-content-center">
+                        <div class="nombre">
+                            <label for="motivo">Seleccionar persona a entregar tarjeta:</label>
+                        </div>
+                        <select id="tipo" name="tipo" onchange="updateInput()">
+                            <option value="" disabled selected>Seleccionar</option>
+                            <option value="melisaPerez">Melisa Perez</option>
+                            <option value="melisaPerez">Melisa Perez</option>
+                            <option value="melisaPerez">Melisa Perez</option>
+                            <option value="melisaPerez">Melisa Perez</option>
+                        </select>
                     </div>
-                    <div class="campo">
-                        <label for="cantidad">Ingresar calorias:</label>
-                        <input type="number" id="calorias" name="calorias" required placeholder="2000..."
-                            class="inputs" />
-                    </div>
-                    <div class="campo">
-                        <label for="cantidad">Ingresar peso de la vianda:</label>
-                        <input type="number" id="peso-vianda" name="peso-vianda" required placeholder="...kg"
-                            class="inputs" />
-                    </div>
-                    <div class="campo">
-                        <label for="cantidad">Ingresar fecha de caducidad:</label>
-                        <input type="date" id="fechaCaducidad" name="fechaCaducidad" required placeholder=""
-                            class="inputs" />
-                    </div>
+
                 </form>
 
                 <button type="submit" id="continuar" class="continuar">Continuar</button>

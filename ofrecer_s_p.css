@@ -122,7 +122,9 @@ input[type="text"], input[type="number"] {
     border: 1px solid grey;
     border-radius: 5px;
     padding: 0.5em;
-    margin: 0.5em 0;
+    margin: 0em 0em;
+    margin-top: -0.5px;
+    margin-bottom: 10px;
     width: 300px;
 }
 
@@ -132,13 +134,21 @@ input[type="text"], input[type="number"] {
     text-align: left;
     color: #ebeaea;
 }
+.custom-file-input {
+    position: relative;
+    width: 100%;
+}
 
-input#fechaCaducidad {
-    background-color: #FFFFFF;
-    border: 1px solid grey;
-    border-radius: 5px;
-    padding: 0.5em;
-    margin: 0.5em 0;
-    width: 500px;
-    color: rgba(117, 115, 115, 1);
+.custom-file-input input[type="file"] {
+    position: absolute;
+    width: 100%; 
+    opacity: 0;
+    cursor: pointer;
+}
+
+.custom-file-input textarea {
+    width: 100%; 
+    margin-top: 0em;
+    height: 18px;
+    border-radius: 8px;
 }

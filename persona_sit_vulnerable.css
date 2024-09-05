@@ -1,3 +1,4 @@
+
 .fondo {
     background-color: rgba(44, 44, 44, 1);
 }
@@ -122,7 +123,9 @@ input[type="text"], input[type="number"] {
     border: 1px solid grey;
     border-radius: 5px;
     padding: 0.5em;
-    margin: 0.5em 0;
+    margin: 0em 0em;
+    margin-top: -0.5px;
+    margin-bottom: 10px;
     width: 300px;
 }
 
@@ -133,12 +136,53 @@ input[type="text"], input[type="number"] {
     color: #ebeaea;
 }
 
-input#fechaCaducidad {
+select#tipo {
     background-color: #FFFFFF;
     border: 1px solid grey;
     border-radius: 5px;
     padding: 0.5em;
-    margin: 0.5em 0;
-    width: 500px;
+    width: 230px;
     color: rgba(117, 115, 115, 1);
+}
+
+.general{
+    display: flex;
+    width: 100%;
+}
+
+.campos {
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+.campo {
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+.campos label {
+    display: block;
+    margin-bottom: 0px;
+    font-size: 14px;
+    margin-left: 40px;
+}
+.campo label {
+    display: block;
+    margin-bottom: 0px;
+    font-size: 14px;
+}
+
+.campos input {
+    padding: 0.5em;
+    margin-left: 40px;;
+    width: 230px;
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+}
+.campo input {
+    padding: 0.5em;
+    margin-left: 40px;;
+    width: 230px;
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+    width: 300px;
 }
