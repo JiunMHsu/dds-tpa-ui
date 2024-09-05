@@ -83,7 +83,7 @@
     padding: 0.75em 1.5em;
     cursor: pointer;
     width: 15rem;
-    margin-top: 1em;
+    margin-top: -5px;
     font-weight: bold;
     margin-bottom: 30px;
 }
@@ -151,38 +151,75 @@ select#tipo {
 }
 
 .campos {
-    margin-bottom: 15px;
-    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-top: 0px;
 }
 .campo {
-    margin-bottom: 15px;
-    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-top: 0px;
 }
+.campox {
+    margin-bottom: 10px;
+    margin-top: 0px;
+}
+
 
 .campos label {
     display: block;
     margin-bottom: 0px;
     font-size: 14px;
-    margin-left: 40px;
+    margin-left: 30px;
 }
 .campo label {
     display: block;
     margin-bottom: 0px;
     font-size: 14px;
 }
+.campox label {
+    display: block;
+    margin-bottom: 0px;
+    font-size: 14px;
+}
+
 
 .campos input {
     padding: 0.5em;
-    margin-left: 40px;;
-    width: 230px;
+    margin-left: 30px;;
+    width: 220px;
     border-radius: 0.5rem;
     border: 1px solid #ccc;
 }
 .campo input {
     padding: 0.5em;
-    margin-left: 40px;;
+    margin-left: 0px;;
+    width: 220px;
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+}
+
+.campox input {
+    padding: 0.5em;
+    margin-left: 0px;;
     width: 230px;
     border-radius: 0.5rem;
     border: 1px solid #ccc;
-    width: 300px;
+    width: 480px;
+}
+
+input#fechaNacimiento {
+    background-color: #FFFFFF;
+    border: 1px solid grey;
+    border-radius: 8px;
+    padding: 0.5em;
+    margin: 0em 0;
+    color: rgba(117, 115, 115, 1);
+}
+
+select#barrio {
+    background-color: #FFFFFF;
+    border: 1px solid grey;
+    border-radius: 8px;
+    padding: 0.5em;
+    width: 500px;
+    color: rgba(117, 115, 115, 1);
 }

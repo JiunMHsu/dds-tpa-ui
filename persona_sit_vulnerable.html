@@ -13,7 +13,7 @@
     <div class="container">
         <div class="formulario-conainer-iz">
             <div class="menu">
-                <a href="persona_vulnerable.html">
+                <a href="persona_sit_vulnerable.html">
                     <img src="icons/ghost-svgrepo-com.svg" class="img" alt="Persona-sit-vulnerable">
                     <label>Persona Sit. Vulnerable</label>
                 </a>
@@ -25,7 +25,7 @@
                 </a>
             </div>
             <div class="menu">
-                <a href="reportes.html">
+                <a href="visualizar_reportes.html">
                     <img src="icons/file-text-svgrepo-com.svg" class="img" alt="Reportes">
                     <label>Reportes</label>
                 </a>
@@ -55,7 +55,7 @@
                 </a>
             </div>
             <div class="menus">
-                <a href="home.html">
+                <a href="home_simpli.html">
                     <img src="icons/home-svgrepo-com.svg" class="img" alt="Home">
                     <label>Home</label>
                 </a>
@@ -65,9 +65,9 @@
             <div class="formulario-conainer" id="formulario-conainer">
                 <form action="" class="formulario" id="formulario">
                     <label for="titutlo" class="titulo"
-                        style="text-align: center; font-size: 20px; margin-bottom: 40px; margin-top: 30px;">Registrar
+                        style="text-align: center; font-size: 20px; margin-bottom: 20px; margin-top: 30px;">Registrar
                         persona en situacion vulnerable</label>
-                    <div class="campo">
+                    <div class="campox">
                         <label for="nombre">Ingresar nombre:</label>
                         <input type="text" id="nombre" name="nombre" required placeholder="Sonia Lopez..."
                             class="inputs" />
@@ -87,24 +87,37 @@
                                 class="inputs" />
                         </div>
                     </div>
-                    <div class="campo">
-                        <label for="docuemnto">Tipo de documento:</label>
-                        <input type="number" id="calorias" name="calorias" required placeholder="2000..."
+                    <div class="campox">
+                        <label for="fechaNacimiento">Ingresar fecha de nacimiento:</label>
+                        <input type="date" id="fechaNacimiento" name="fechaNacimiento" required placeholder=""
                             class="inputs" />
                     </div>
-                    <div class="row auto justify-content-center">
-                        <div class="nombre">
-                            <label for="motivo">Seleccionar persona a entregar tarjeta:</label>
+                    <div class="general">
+                        <div class="campo">
+                            <label for="calle">Ingresar calle:</label>
+                            <input type="text" id="motivo" name="motivo" required placeholder="Av rivadavia"
+                                class="inputs" />
                         </div>
-                        <select id="tipo" name="tipo" onchange="updateInput()">
+                        <div class="campos">
+                            <label for="motivo">Nro de domicilio:</label>
+                            <input type="number" id="motivo" name="motivo" required placeholder="0000" class="inputs" />
+                        </div>
+                    </div>
+                    <div class="campo">
+                        <label for="motivo">Seleccionar barrio:</label>
+                        <select id="barrio" name="barrio" onchange="updateInput()">
                             <option value="" disabled selected>Seleccionar</option>
-                            <option value="melisaPerez">Melisa Perez</option>
-                            <option value="melisaPerez">Melisa Perez</option>
-                            <option value="melisaPerez">Melisa Perez</option>
-                            <option value="melisaPerez">Melisa Perez</option>
+                            <option value="agronomia">Agronomia</option>
+                            <option value="almagro">Almagro</option>
+                            <option value="balvanera">Balvanera</option>
+                            <option value="barracas">Barracas</option>
                         </select>
                     </div>
-
+                    <div class="campox">
+                        <label for="enoresACargo">Ingresar cantidad de menores a cargo:</label>
+                        <input type="numer" id="enoresACargo" name="enoresACargo" required placeholder="0"
+                            class="inputs" />
+                    </div>
                 </form>
 
                 <button type="submit" id="continuar" class="continuar">Continuar</button>

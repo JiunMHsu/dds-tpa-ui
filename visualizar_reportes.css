@@ -11,12 +11,46 @@
     border-radius: 1rem;
     padding: 2em;
     text-align: center;
-    /*left: 1240px;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 40px;
     height: 570px;
-    margin-left: 10px;
+    margin-left: 15px; 
     margin-top: 15px;
     margin-bottom: 15px;
+}
+.img {
+    margin: 0px 0px; 
+    width: 35px; 
+    height: 35px;
+    margin-bottom: 0px;
+}
+.menu a {
+    text-decoration: none; 
+    color: inherit; 
+    margin: 0px 0px;
+}
+
+.menu label {
+    display: block;
+    text-align: center;
+    color:bisque; 
+    font-size: 10px;
+    font-family: 'Raleway', sans-serif;
+    margin: 0px 0px;
+    width: 80px;
+    margin-bottom: 15px;
+}
+.menus label {
+    display: block;
+    text-align: center;
+    color:bisque; 
+    font-size: 10px;
+    font-family: 'Raleway', sans-serif;
+    margin: 0px 0px;
+    width: 80px;
 }
 .formulario-conainer {
     width: 1340px;
