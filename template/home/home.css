@@ -5,7 +5,7 @@
 @font-face {
    font-family: 'Material Symbols Rounded';
    font-style: normal;
-   src: url(./public/material-symbols/MaterialSymbolsRounded.woff2) format('woff');
+   src: url(../../public/material-symbols/MaterialSymbolsRounded.woff2) format('woff');
 }
 
 .material-symbols-rounded {
@@ -95,7 +95,7 @@ body {
 .nav-icon {
    font-size: 2rem;
    /* max-width: 4em; */
-   margin-bottom: .5rem;
+   margin-bottom: .2rem;
 }
 
 .nav-txt {
@@ -123,6 +123,11 @@ body {
    overflow-y: scroll;
 }
 
+#map {
+   height: 100%;
+   width: 100%;
+}
+
 .side-panel {
    display: flex;
    flex-direction: column;
@@ -132,6 +137,7 @@ body {
    width: min-content;
    margin: .5em;
    border-radius: .7em;
+   overflow: hidden;
    /* background-color: var(--background-1); */
 }
 
