@@ -92,13 +92,10 @@ body {
    color: var(--main-light-0);
 }
 
-.nav-icon:hover>.nav-icon {
-   font-variation-settings: 'FILL' 1;
-}
-
 .nav-icon {
-   font-size: 2.3rem;
-   margin: .5rem 0;
+   font-size: 2rem;
+   /* max-width: 4em; */
+   margin-bottom: .5rem;
 }
 
 .nav-txt {
