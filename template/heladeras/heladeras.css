@@ -1,5 +1,5 @@
 .main-section {
-   padding: 0 1rem;
+   padding: 0 .5rem;
    overflow-y: hidden;
 }
 
@@ -7,8 +7,8 @@
    display: flex;
    flex-direction: row;
    align-items: flex-start;
-   width: 100%;
    gap: 1rem;
+   width: 100%;
 }
 
 .feature {
@@ -27,7 +27,6 @@
    flex-grow: 1;
    display: flex;
    margin: 0;
-   /* margin-bottom: 1rem; */
    font-size: 1.1rem;
    text-overflow: ellipsis;
 }
@@ -46,7 +45,7 @@
    padding: .3rem .5rem;
    border-radius: .5rem;
    background-color: var(--background-3);
-   color: var(--foreground-3);
+   color: var(--foreground-2);
    text-decoration: none;
    transition-property: all;
    transition-duration: 300ms;
@@ -65,7 +64,6 @@
    margin: 0;
    margin-top: 1rem;
    padding: .5rem 0;
-   /* border-bottom: 1px solid var(--background-3); */
    font-size: 2.2rem;
 }
 
@@ -89,12 +87,97 @@
    border: 1px solid var(--background-3);
 }
 
+.paging-nav {
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-end;
+   gap: .5rem;
+   width: 100%;
+   margin: .5rem 0;
+}
+
+.paging-button {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: .1rem 1rem;
+
+   border-radius: .5rem;
+   text-decoration: none;
+   color: var(--foreground-3);
+   border: 1px solid var(--background-3);
+   transition-property: all;
+   transition-duration: 300ms;
+}
+
+.paging-button:hover {
+   color: var(--background-0);
+   background-color: var(--main-light-0);
+}
+
 .scrollable {
    display: flex;
    flex-direction: column;
    overflow-y: scroll;
    height: 100%;
    width: 100%;
+   margin-top: .5rem;
+}
+
+.lista-heladeras {
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: center;
+   gap: .5rem;
+   width: 100%;
+   margin: 0;
+   padding: 0;
+}
+
+.item-heladera {
+   display: flex;
+   align-items: center;
+   width: 100%;
+}
+
+.card-heladera {
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   padding: 1rem;
+   border-radius: .5rem;
+   text-decoration: none;
+   color: var(--foreground-0);
+   background-color: var(--background-2);
+
+   transition-property: all;
+   transition-duration: 300ms;
+}
+
+.card-heladera:hover {
+   color: var(--main-light-0);
+   background-color: var(--background-3);
+}
+
+.card-title {
+   display: flex;
+   margin: 0;
+   margin-bottom: 1rem;
+   font-weight: 700;
+   font-size: 1.5rem;
+}
+
+.card-heladera p {
+   display: flex;
+   align-items: center;
+   margin: .1rem;
+   font-size: .9rem;
+}
+
+.card-detail-icon {
+   font-size: .9rem;
+   margin-right: .5rem;
 }
 
 .side-panel {
