@@ -50,7 +50,6 @@ body {
    margin: 0 .5em;
    border: 1px solid var(--background-3);
    border-radius: .7em;
-   /* background-color: var(--background-3); */
 }
 
 .nav-option {
@@ -59,9 +58,7 @@ body {
    justify-content: center;
    align-items: center;
    width: 5em;
-   /* height: 5em; */
    margin: .3em;
-   /* border-radius: 1em; */
    color: var(--foreground-3);
    text-decoration: none;
    transition-property: all;
@@ -69,13 +66,11 @@ body {
 }
 
 .nav-option:hover {
-   /* font-variation-settings: 'FILL' 1; */
    color: var(--main-light-0);
 }
 
 .nav-icon {
    font-size: 2em;
-   /* max-width: 4em; */
    margin-bottom: .2rem;
 }
 
@@ -97,10 +92,8 @@ body {
    justify-content: flex-start;
    align-items: center;
    height: 95vh;
-   /* width: auto; */
    margin: 0 .5em;
    border-radius: .7em;
-   /* background-color: var(--background-2); */
    overflow-y: scroll;
 }
 
@@ -115,6 +108,4 @@ body {
    border-radius: .7em;
    overflow: hidden;
    border: 1px solid var(--background-3);
-
-   /* background-color: var(--background-1); */
 }

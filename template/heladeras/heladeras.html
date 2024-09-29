@@ -10,6 +10,9 @@
     />
     <link rel="stylesheet" href="base.css" />
     <link rel="stylesheet" href="heladeras.css" />
+
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js"></script>
+    <script src="map.js"></script>
   </head>
 
   <body>
@@ -66,11 +69,186 @@
 
       <!-- MAIN -->
       <div class="main-section">
-        <h1>HELADERA</h1>
+        <div class="feature-container">
+          <div class="colocar-heladera feature">
+            <h3 class="feature-text">Colocar Heladera</h3>
+            <div class="feature-button-container">
+              <a href="" class="feature-button">ver</a>
+            </div>
+          </div>
+
+          <div class="encargarse-de-heladera feature">
+            <h3 class="feature-text">Encargarse de Heladera</h3>
+            <div class="feature-button-container">
+              <a href="" class="feature-button">ver</a>
+            </div>
+          </div>
+
+          <div class="suscribir-a-heladera feature">
+            <h3 class="feature-text">Suscribir a Heladera</h3>
+            <div class="feature-button-container">
+              <a href="" class="feature-button">ver</a>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="title">Heladeras</h2>
+
+        <div class="filter-container">
+          <div class="filter">FILTROS</div>
+          <!-- barra de busqueda y filtros -->
+          <!-- filtro: activo, suscripto, encargado -->
+        </div>
+
+        <!-- navegación a sig pág -->
+        <div class="scrollable">
+          <ul class="lista-heladeras">
+            <!-- !! MODELO DE ITEM -->
+            <li class="item-heladera">
+              <a href="" class="card-heladera"
+                >Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Quaerat sapiente velit veniam porro enim quas esse ab. Velit
+                magni, explicabo temporibus rerum impedit nulla expedita
+                repellendus sapiente quam nesciunt debitis.</a
+              >
+            </li>
+            <!-- !! MODELO DE ITEM -->
+
+            <li class="item-heladera">
+              <a href="" class="card-heladera"
+                >Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Quaerat sapiente velit veniam porro enim quas esse ab. Velit
+                magni, explicabo temporibus rerum impedit nulla expedita
+                repellendus sapiente quam nesciunt debitis.</a
+              >
+            </li>
+            <li class="item-heladera">
+              <a href="" class="card-heladera"
+                >Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Quaerat sapiente velit veniam porro enim quas esse ab. Velit
+                magni, explicabo temporibus rerum impedit nulla expedita
+                repellendus sapiente quam nesciunt debitis.</a
+              >
+            </li>
+            <li class="item-heladera">
+              <a href="" class="card-heladera"
+                >Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Quaerat sapiente velit veniam porro enim quas esse ab. Velit
+                magni, explicabo temporibus rerum impedit nulla expedita
+                repellendus sapiente quam nesciunt debitis.</a
+              >
+            </li>
+            <li class="item-heladera">
+              <a href="" class="card-heladera"
+                >Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Quaerat sapiente velit veniam porro enim quas esse ab. Velit
+                magni, explicabo temporibus rerum impedit nulla expedita
+                repellendus sapiente quam nesciunt debitis.</a
+              >
+            </li>
+            <li class="item-heladera">
+              <a href="" class="card-heladera"
+                >Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Quaerat sapiente velit veniam porro enim quas esse ab. Velit
+                magni, explicabo temporibus rerum impedit nulla expedita
+                repellendus sapiente quam nesciunt debitis.</a
+              >
+            </li>
+            <li class="item-heladera">
+              <a href="" class="card-heladera"
+                >Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Quaerat sapiente velit veniam porro enim quas esse ab. Velit
+                magni, explicabo temporibus rerum impedit nulla expedita
+                repellendus sapiente quam nesciunt debitis.</a
+              >
+            </li>
+            <li class="item-heladera">
+              <a href="" class="card-heladera"
+                >Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Quaerat sapiente velit veniam porro enim quas esse ab. Velit
+                magni, explicabo temporibus rerum impedit nulla expedita
+                repellendus sapiente quam nesciunt debitis.</a
+              >
+            </li>
+            <li class="item-heladera">
+              <a href="" class="card-heladera"
+                >Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Quaerat sapiente velit veniam porro enim quas esse ab. Velit
+                magni, explicabo temporibus rerum impedit nulla expedita
+                repellendus sapiente quam nesciunt debitis.</a
+              >
+            </li>
+            <li class="item-heladera">
+              <a href="" class="card-heladera"
+                >Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Quaerat sapiente velit veniam porro enim quas esse ab. Velit
+                magni, explicabo temporibus rerum impedit nulla expedita
+                repellendus sapiente quam nesciunt debitis.</a
+              >
+            </li>
+            <li class="item-heladera">
+              <a href="" class="card-heladera"
+                >Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Quaerat sapiente velit veniam porro enim quas esse ab. Velit
+                magni, explicabo temporibus rerum impedit nulla expedita
+                repellendus sapiente quam nesciunt debitis.</a
+              >
+            </li>
+            <li class="item-heladera">
+              <a href="" class="card-heladera"
+                >Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Quaerat sapiente velit veniam porro enim quas esse ab. Velit
+                magni, explicabo temporibus rerum impedit nulla expedita
+                repellendus sapiente quam nesciunt debitis.</a
+              >
+            </li>
+            <li class="item-heladera">
+              <a href="" class="card-heladera"
+                >Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Quaerat sapiente velit veniam porro enim quas esse ab. Velit
+                magni, explicabo temporibus rerum impedit nulla expedita
+                repellendus sapiente quam nesciunt debitis.</a
+              >
+            </li>
+            <li class="item-heladera">
+              <a href="" class="card-heladera"
+                >Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Quaerat sapiente velit veniam porro enim quas esse ab. Velit
+                magni, explicabo temporibus rerum impedit nulla expedita
+                repellendus sapiente quam nesciunt debitis.</a
+              >
+            </li>
+            <li class="item-heladera">
+              <a href="" class="card-heladera"
+                >Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Quaerat sapiente velit veniam porro enim quas esse ab. Velit
+                magni, explicabo temporibus rerum impedit nulla expedita
+                repellendus sapiente quam nesciunt debitis.</a
+              >
+            </li>
+            <li class="item-heladera">
+              <a href="" class="card-heladera"
+                >Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Quaerat sapiente velit veniam porro enim quas esse ab. Velit
+                magni, explicabo temporibus rerum impedit nulla expedita
+                repellendus sapiente quam nesciunt debitis.</a
+              >
+            </li>
+            <li class="item-heladera">
+              <a href="" class="card-heladera"
+                >Last Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Quaerat sapiente velit veniam porro enim quas esse ab. Velit
+                magni, explicabo temporibus rerum impedit nulla expedita
+                repellendus sapiente quam nesciunt debitis.</a
+              >
+            </li>
+            <!-- iteración de heladeras (paginada de a 20) -->
+          </ul>
+        </div>
       </div>
 
       <div class="side-panel">
-        <div class="side-block">HOLA</div>
+        <div id="map"></div>
       </div>
     </div>
   </body>
