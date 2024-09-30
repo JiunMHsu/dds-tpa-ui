@@ -1,0 +1,112 @@
+*::-webkit-scrollbar {
+   display: none;
+}
+
+:root {
+   color-scheme: dark light;
+   font-family: 'Roboto', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI';
+   font-weight: 500;
+   font-size: 16px;
+   box-sizing: border-box;
+
+   --background-0: #121212;
+   --background-1: #202020;
+   --background-2: #303030;
+   --background-3: #505050;
+
+   --foreground-0: #f0f0f0;
+   --foreground-1: #cfcfcf;
+   --foreground-2: #bbbbbb;
+   --foreground-3: #a0a0a0;
+
+   --main-light-0: #f0dbaa;
+   --main-light-1: #e7d3a3;
+}
+
+body {
+   display: flex;
+   flex-direction: column;
+   margin: 0;
+   padding: 0;
+   height: 100vh;
+   width: 100vw;
+}
+
+.root {
+   flex-grow: 1;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   background-color: var(--background-1);
+   overflow: hidden;
+}
+
+.nav-bar {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   align-items: center;
+   height: 95vh;
+   width: min-content;
+   margin: 0 .5em;
+   border: 1px solid var(--background-3);
+   border-radius: .7em;
+}
+
+.nav-option {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   width: 5em;
+   margin: .3em;
+   color: var(--foreground-3);
+   text-decoration: none;
+   transition-property: all;
+   transition-duration: 300ms;
+}
+
+.nav-option:hover {
+   color: var(--main-light-0);
+}
+
+.nav-icon {
+   font-size: 2em;
+   margin-bottom: .2rem;
+}
+
+.nav-txt {
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: center;
+   max-width: 5em;
+   font-size: .9em;
+   text-overflow: ellipsis;
+   text-align: center;
+}
+
+.main-section {
+   flex-grow: 1;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: center;
+   height: 95vh;
+   margin: 0 .5em;
+   border-radius: .7em;
+   overflow-y: scroll;
+}
+
+.side-panel {
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: center;
+   height: 95vh;
+   width: min-content;
+   margin: 0 .5em;
+   border-radius: .7em;
+   overflow: hidden;
+   border: 1px solid var(--background-3);
+}

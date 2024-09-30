@@ -1,0 +1,200 @@
+.main-section {
+   padding: 0 .5rem;
+   overflow-y: hidden;
+}
+
+.title {
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-start;
+   width: 100%;
+   margin: 1rem 0 1.2rem;
+   font-size: 2.2rem;
+}
+
+.filter-container {
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-start;
+   align-items: center;
+   width: 100%;
+   margin: .5rem 0;
+}
+
+.filter {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   height: 2rem;
+   width: 100%;
+   border-radius: .5rem;
+   border: 1px solid var(--background-3);
+}
+
+.paging-nav {
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-end;
+   gap: .5rem;
+   width: 100%;
+   margin: .5rem 0;
+}
+
+.paging-button {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: .1rem 1rem;
+
+   border-radius: .5rem;
+   text-decoration: none;
+   color: var(--foreground-3);
+   border: 1px solid var(--background-3);
+   transition-property: all;
+   transition-duration: 300ms;
+}
+
+.paging-button:hover {
+   color: var(--background-0);
+   background-color: var(--main-light-0);
+}
+
+.scrollable {
+   display: flex;
+   flex-direction: column;
+   overflow-y: scroll;
+   height: 100%;
+   width: 100%;
+   margin-top: .5rem;
+}
+
+.historial-colaboraciones {
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: center;
+   gap: .5rem;
+   width: 100%;
+   margin: 0;
+   padding: 0;
+}
+
+.colaboracion-realizada {
+   display: flex;
+   align-items: center;
+   width: 100%;
+}
+
+.card-colaboracion {
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   padding: 1rem;
+   border-radius: .5rem;
+   text-decoration: none;
+   color: var(--foreground-0);
+   background-color: var(--background-2);
+
+   transition-property: all;
+   transition-duration: 300ms;
+}
+
+.card-colaboracion:hover {
+   color: var(--main-light-0);
+   background-color: var(--background-3);
+}
+
+.card-title {
+   display: flex;
+   margin: 0 0 1rem;
+   font-weight: 700;
+   font-size: 1.5rem;
+}
+
+.card-colaboracion p {
+   display: flex;
+   align-items: center;
+   margin: .1rem;
+   font-size: .9rem;
+}
+
+.card-detail-icon {
+   font-size: .9rem;
+   margin-right: .5rem;
+}
+
+.side-panel {
+   border: none;
+}
+
+.lista-colaboraciones {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 1rem;
+   padding: 1rem;
+   overflow-y: scroll;
+}
+
+.item-colaboracion {
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-end;
+   height: 6rem;
+   width: 13rem;
+   padding: 1rem;
+   border-radius: .7rem;
+   border: 1px solid var(--background-3);
+
+   color: var(--foreground-0);
+
+   transition-property: all;
+   transition-duration: 300ms;
+}
+
+.item-colaboracion:hover {
+   cursor: default;
+   box-shadow: 0 0 1rem var(--background-3);
+}
+
+.item-colaboracion:hover>.colaboracion-title {
+   color: var(--main-light-0);
+   text-shadow: 0 0 1rem var(--main-light-0);
+}
+
+
+.item-colaboracion * {
+   margin: 0;
+   color: var(--foreground-0);
+}
+
+.colaboracion-title {
+   flex-grow: 1;
+   font-size: 1.3rem;
+   text-shadow: 0 0 1rem var(--background-3);
+
+   transition-property: all;
+   transition-duration: 300ms;
+}
+
+.colaboracion-button-container {
+   display: flex;
+   justify-content: flex-end;
+}
+
+.colaboracion-button {
+   padding: .5rem;
+   border-radius: .5rem;
+   background-color: var(--background-2);
+   font-size: 1rem;
+   text-decoration: none;
+   text-align: center;
+
+   transition-property: all;
+   transition-duration: 300ms;
+}
+
+.colaboracion-button:hover {
+   background-color: var(--main-light-0);
+   color: var(--background-3);
+}

@@ -3,19 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Heladeras</title>
+    <title>Colaboraciones</title>
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
     <link rel="stylesheet" href="base.css" />
     <link rel="stylesheet" href="list.css">
-    <link rel="stylesheet" href="heladeras.css" />
-
-    <script src="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js"></script>
-    <script src="map.js"></script>
+    <link rel="stylesheet" href="colaboraciones.css" />
   </head>
-
   <body>
     <div class="root">
       <nav class="nav-bar">
@@ -70,30 +66,7 @@
 
       <!-- MAIN -->
       <div class="main-section">
-        <div class="feature-container">
-          <div class="colocar-heladera feature">
-            <h3 class="feature-text">Colocar Heladera</h3>
-            <div class="feature-button-container">
-              <a href="" class="feature-button">ver</a>
-            </div>
-          </div>
-
-          <div class="encargarse-de-heladera feature">
-            <h3 class="feature-text">Encargarse de Heladera</h3>
-            <div class="feature-button-container">
-              <a href="" class="feature-button">ver</a>
-            </div>
-          </div>
-
-          <div class="suscribir-a-heladera feature">
-            <h3 class="feature-text">Suscribir a Heladera</h3>
-            <div class="feature-button-container">
-              <a href="" class="feature-button">ver</a>
-            </div>
-          </div>
-        </div>
-
-        <h2 class="list-title">Heladeras</h2>
+        <h2 class="list-title">Colaboraciones Realizadas</h2>
 
         <div class="filter-container">
           <div class="filter">FILTROS</div>
@@ -115,42 +88,74 @@
             <!-- !! MODELO DE ITEM -->
             <li class="list-item">
               <a href="" class="item-card">
-                <h3 class="card-title">Heladera Medrano UTN</h3>
+                <h3 class="card-title">Donación de Dinero</h3>
                 <p>
-                  <span class="material-symbols-rounded card-detail-icon"
-                    >radio_button_checked</span
-                  >
-                  Estado: Activo
-                </p>
-                <p>
-                  <span class="material-symbols-rounded card-detail-icon"
-                    >location_on</span
-                  >
-                  Dirección: Av. Medrano 951
-                </p>
-                <p>
-                  <span class="material-symbols-rounded card-detail-icon"
-                    >my_location</span
-                  >
-                  Ubicación: -34.59857981526152, -58.420110294464294
-                </p>
-                <p>
-                  <span class="material-symbols-rounded card-detail-icon"
-                    >package_2</span
-                  >
-                  Viandas: 83
+                  <span class="material-symbols-rounded card-detail-icon">
+                    today
+                  </span>
+                  Fecha: 12/10/2021
                 </p>
               </a>
             </li>
             <!-- !! MODELO DE ITEM -->
 
-            <!-- iteración de heladeras (paginada de a 20) -->
+            <!-- iteración de colaboraciones (paginada de a 20) -->
           </ul>
         </div>
       </div>
 
       <div class="side-panel">
-        <div id="map"></div>
+        <!-- renderizado condicional de colaboraciones que el usuario puede realizar -->
+        <div class="lista-colaboraciones">
+          <div class="item-colaboracion">
+            <h3 class="colaboracion-title">Donar Dinero</h3>
+            <div class="colaboracion-button-container">
+              <a href="" class="colaboracion-button">colaborar</a>
+            </div>
+          </div>
+
+          <div class="item-colaboracion">
+            <h3 class="colaboracion-title">Donar Vianda</h3>
+            <div class="colaboracion-button-container">
+              <a href="" class="colaboracion-button">colaborar</a>
+            </div>
+          </div>
+
+          <div class="item-colaboracion">
+            <h3 class="colaboracion-title">Registrar Persona Vulnerable</h3>
+            <div class="colaboracion-button-container">
+              <a href="" class="colaboracion-button">colaborar</a>
+            </div>
+          </div>
+
+          <div class="item-colaboracion">
+            <h3 class="colaboracion-title">Entregar Viandas</h3>
+            <div class="colaboracion-button-container">
+              <a href="" class="colaboracion-button">colaborar</a>
+            </div>
+          </div>
+
+          <div class="item-colaboracion">
+            <h3 class="colaboracion-title">Distribuir Viandas</h3>
+            <div class="colaboracion-button-container">
+              <a href="" class="colaboracion-button">colaborar</a>
+            </div>
+          </div>
+
+          <div class="item-colaboracion">
+            <h3 class="colaboracion-title">Ofrecer Producto / Servicio</h3>
+            <div class="colaboracion-button-container">
+              <a href="" class="colaboracion-button">colaborar</a>
+            </div>
+          </div>
+
+          <div class="item-colaboracion">
+            <h3 class="colaboracion-title">Hacer Cargo de Heladeras</h3>
+            <div class="colaboracion-button-container">
+              <a href="" class="colaboracion-button">colaborar</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </body>
