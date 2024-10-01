@@ -5,18 +5,8 @@ input::-webkit-inner-spin-button {
 }
 
 .main-section {
+   border: 1px solid var(--background-3);
    overflow-y: hidden;
-}
-
-#map {
-   flex-grow: 1;
-   height: 100%;
-   width: 100%;
-}
-
-.side-panel {
-   width: min-content;
-   padding: 0 4rem;
 }
 
 .form-container {
@@ -25,14 +15,13 @@ input::-webkit-inner-spin-button {
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   /* padding: 0 2rem; */
    overflow-y: scroll;
 }
 
 .form-container h2 {
    display: flex;
    width: 100%;
-   margin: 0 0 2.5rem;
+   margin: 0 0 4%;
    font-size: 1.8rem;
    font-weight: 600;
 
@@ -42,7 +31,7 @@ input::-webkit-inner-spin-button {
 
 .form {
    display: grid;
-   grid-template-columns: 12rem 12rem;
+   grid-template-columns: 15rem 15rem;
    gap: 1rem;
    column-gap: 2rem;
    width: 100%;
@@ -86,7 +75,7 @@ input::-webkit-inner-spin-button {
    grid-column: 1 / -1;
 }
 
-.form-submit-button-container {
+.form-button-container {
    grid-column: 1 / -1;
    display: flex;
    justify-content: flex-end;
@@ -94,7 +83,7 @@ input::-webkit-inner-spin-button {
    margin-top: 1rem;
 }
 
-.form-submit-button-container button {
+.form button {
    padding: .5rem 1.5rem;
    border-radius: .5rem;
    cursor: pointer;
@@ -108,7 +97,99 @@ input::-webkit-inner-spin-button {
    transition-duration: 300ms;
 }
 
-.form-submit-button-container button:hover {
+.form button:hover {
    color: var(--background-0);
    background-color: var(--main-light-0);
+}
+
+.side-panel {
+   width: 40vw;
+   justify-content: flex-end;
+   border: none;
+   padding: 0 .2rem 0;
+}
+
+.solicitud-recomendacion-container {
+   flex-grow: 1;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   height: 55vh;
+   overflow-y: scroll;
+   overflow-x: scroll;
+}
+
+.solicitud-title {
+   display: flex;
+   width: 100%;
+   margin: 0;
+   font-size: 1.5rem;
+   font-weight: 600;
+   color: var(--foreground-2);
+   text-align: left;
+}
+
+.form-recomendacion {
+   gap: .7rem;
+   margin: 1rem 0 1rem;
+}
+
+.form-recomendacion .form-button-container {
+   margin-top: .2rem;
+}
+
+.resultados-container {
+   display: grid;
+   grid-template-columns: 1fr;
+   justify-content: center;
+   align-items: center;
+   row-gap: .5rem;
+   width: 100%;
+   margin: .2rem 0 .7rem;
+}
+
+.card-resultado {
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   padding: .7rem;
+   border-radius: .7rem;
+   border: 1px solid var(--background-3);
+   background-color: var(--background-2);
+
+   transition-property: all;
+   transition-duration: 300ms;
+}
+
+.card-resultado:hover {
+   cursor: default;
+   color: var(--main-light-0);
+   text-shadow: 0 0 .5rem var(--foreground-2);
+   background-color: var(--background-1);
+}
+
+.card-resultado p {
+   display: flex;
+   align-items: center;
+   margin: .2rem;
+   font-size: .8rem;
+}
+
+.card-detail-icon {
+   font-size: .8rem;
+   margin-right: .5rem;
+}
+
+.map-container {
+   display: flex;
+   height: 40vh;
+   width: 100%;
+   border-radius: .7rem;
+   overflow: hidden;
+}
+
+#map {
+   height: 100%;
+   width: 100%;
 }

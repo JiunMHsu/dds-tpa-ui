@@ -72,17 +72,6 @@
 
       <!-- MAIN -->
       <div class="main-section">
-        <!-- Sección de solicitud por puntos recomendados -->
-        <!-- <section class="solicitud-recomendacion-container">
-          <h2 class="solicitud-title"></h2>
-          <form action="/" method="post"></form>
-          <div class="resultados"></div>
-        </section> -->
-
-        <div id="map"></div>
-      </div>
-
-      <div class="side-panel">
         <div class="form-container">
           <h2 class="form-title">Registrar Heladera Nueva</h2>
 
@@ -98,7 +87,14 @@
             </label>
             <label class="field-capacidad"
               >Capacidad
-              <input type="number" name="capacidad" placeholder="82" required />
+              <input
+                type="number"
+                min="1"
+                step="1"
+                name="capacidad"
+                placeholder="82"
+                required
+              />
             </label>
 
             <label class="field-calle"
@@ -112,7 +108,14 @@
             </label>
             <label class="field-altura"
               >Altura
-              <input type="number" name="altura" placeholder="951" required />
+              <input
+                type="number"
+                min="0"
+                step="1"
+                name="altura"
+                placeholder="951"
+                required
+              />
             </label>
 
             <!-- !! no se qué tan bueno esta delegar al usuario a ingresar las coordenadas -->
@@ -158,10 +161,103 @@
               <input type="number" name="tem_maxima" placeholder="3.0" />
             </label>
 
-            <div class="form-submit-button-container">
+            <div class="form-button-container">
               <button type="submit">Registrar</button>
             </div>
           </form>
+        </div>
+      </div>
+
+      <div class="side-panel">
+        <!-- Sección de solicitud por puntos recomendados -->
+        <section class="solicitud-recomendacion-container">
+          <h2 class="solicitud-title">Recomendación de Puntos de Colocación</h2>
+
+          <form action="/" method="post" class="form form-recomendacion">
+            <label class="field-latitud"
+              >Latitud
+              <input
+                type="number"
+                name="latitud"
+                placeholder="34.1241244"
+                required
+              />
+            </label>
+            <label class="field-longitud"
+              >Longitud
+              <input
+                type="number"
+                name="longitud"
+                placeholder="-91.1865124"
+                required
+              />
+            </label>
+            <label class="field-radio"
+              >Radio (metros)
+              <input
+                type="number"
+                min="0"
+                step="1"
+                name="radio"
+                placeholder="5000"
+                required
+              />
+            </label>
+
+            <div class="form-button-container">
+              <button type="submit">Generar</button>
+            </div>
+          </form>
+        </section>
+
+        <!-- debería hacer display únicamente después de la petición -->
+        <section class="resultados-container" style="display: grid">
+          <div class="card-resultado">
+            <p>
+              <span class="material-symbols-rounded card-detail-icon"
+                >location_on</span
+              >
+              Av. Medrano 951
+            </p>
+            <p>
+              <span class="material-symbols-rounded card-detail-icon"
+                >my_location</span
+              >
+              -34.59857981526152, -58.420110294464294
+            </p>
+          </div>
+          <div class="card-resultado">
+            <p>
+              <span class="material-symbols-rounded card-detail-icon"
+                >location_on</span
+              >
+              Av. Medrano 951
+            </p>
+            <p>
+              <span class="material-symbols-rounded card-detail-icon"
+                >my_location</span
+              >
+              -34.59857981526152, -58.420110294464294
+            </p>
+          </div>
+          <div class="card-resultado">
+            <p>
+              <span class="material-symbols-rounded card-detail-icon"
+                >location_on</span
+              >
+              Av. Medrano 951
+            </p>
+            <p>
+              <span class="material-symbols-rounded card-detail-icon"
+                >my_location</span
+              >
+              -34.59857981526152, -58.420110294464294
+            </p>
+          </div>
+        </section>
+
+        <div class="map-container">
+          <div id="map"></div>
         </div>
       </div>
     </div>
