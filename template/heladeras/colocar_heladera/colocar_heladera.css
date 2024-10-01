@@ -1,23 +1,114 @@
-/* !! */
-
-.formulario {
-   display: grid;
-   gap: .5rem;
-
-   /* cambiar a grid-template-area */
-   grid-template-columns: 1fr 1fr;
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+   -webkit-appearance: none;
+   margin: 0;
 }
 
-.formulario label {
-   display: flex;
-   flex-direction: column;
-}
-
-.side-panel {
-   width: 35vw;
+.main-section {
+   overflow-y: hidden;
 }
 
 #map {
+   flex-grow: 1;
    height: 100%;
    width: 100%;
+}
+
+.side-panel {
+   width: min-content;
+   padding: 0 4rem;
+}
+
+.form-container {
+   flex-grow: 1;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   /* padding: 0 2rem; */
+   overflow-y: scroll;
+}
+
+.form-container h2 {
+   display: flex;
+   width: 100%;
+   margin: 0 0 2.5rem;
+   font-size: 1.8rem;
+   font-weight: 600;
+
+   text-align: left;
+   color: var(--foreground-2);
+}
+
+.form {
+   display: grid;
+   grid-template-columns: 12rem 12rem;
+   gap: 1rem;
+   column-gap: 2rem;
+   width: 100%;
+}
+
+.form label {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   width: 100%;
+
+   font-size: 1rem;
+   font-weight: 600;
+   color: var(--foreground-2);
+}
+
+.form label * {
+   margin-top: .25rem;
+   padding: .5rem;
+   border-radius: .3rem;
+   background-color: var(--background-2);
+   border: 1px solid var(--background-3);
+
+   font-size: .9rem;
+   color: var(--main-light-0);
+
+   transition-property: all;
+   transition-duration: 300ms;
+}
+
+.form label *:focus {
+   outline: none;
+   box-shadow: 0 0 .5rem var(--background-3);
+}
+
+.field-nombre {
+   grid-column: 1 / -1;
+}
+
+.field-capacidad {
+   grid-column: 1 / -1;
+}
+
+.form-submit-button-container {
+   grid-column: 1 / -1;
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   margin-top: 1rem;
+}
+
+.form-submit-button-container button {
+   padding: .5rem 1.5rem;
+   border-radius: .5rem;
+   cursor: pointer;
+   background-color: var(--background-2);
+   border: 1px solid var(--background-3);
+
+   font-size: .9rem;
+   color: var(--foreground-1);
+
+   transition-property: all;
+   transition-duration: 300ms;
+}
+
+.form-submit-button-container button:hover {
+   color: var(--background-0);
+   background-color: var(--main-light-0);
 }

@@ -73,10 +73,21 @@
       <!-- MAIN -->
       <div class="main-section">
         <!-- Sección de solicitud por puntos recomendados -->
+        <!-- <section class="solicitud-recomendacion-container">
+          <h2 class="solicitud-title"></h2>
+          <form action="/" method="post"></form>
+          <div class="resultados"></div>
+        </section> -->
 
-        <div class="formulario-conainer">
-          <form action="/heladeras" method="POST" class="formulario">
-            <label
+        <div id="map"></div>
+      </div>
+
+      <div class="side-panel">
+        <div class="form-container">
+          <h2 class="form-title">Registrar Heladera Nueva</h2>
+
+          <form action="/heladeras" method="post" class="form">
+            <label class="field-nombre"
               >Nombre
               <input
                 type="text"
@@ -85,7 +96,12 @@
                 required
               />
             </label>
-            <label
+            <label class="field-capacidad"
+              >Capacidad
+              <input type="number" name="capacidad" placeholder="82" required />
+            </label>
+
+            <label class="field-calle"
               >Calle
               <input
                 type="text"
@@ -94,13 +110,13 @@
                 required
               />
             </label>
-            <label
+            <label class="field-altura"
               >Altura
               <input type="number" name="altura" placeholder="951" required />
             </label>
 
             <!-- !! no se qué tan bueno esta delegar al usuario a ingresar las coordenadas -->
-            <label
+            <label class="field-latitud"
               >Latitud
               <input
                 type="number"
@@ -109,7 +125,7 @@
                 required
               />
             </label>
-            <label
+            <label class="field-longitud"
               >Longitud
               <input
                 type="number"
@@ -119,7 +135,7 @@
               />
             </label>
 
-            <label
+            <label class="field-estado"
               >Estado
               <select name="estado" onchange="updateInput()" required>
                 <option value="" disabled selected>Seleccionar</option>
@@ -128,93 +144,25 @@
               </select>
             </label>
 
-            <label
-              >Inicio de Funcionamiento
+            <label class="field-fecha-inicio"
+              >Inicio de funcionamiento
               <input type="date" name="estado" />
             </label>
 
-            <div class="formulario-submit-button-container">
+            <label class="field-temperatura-minima"
+              >Temperatura Mínima
+              <input type="number" name="temp_minima" placeholder="-5.0" />
+            </label>
+            <label class="field-temperatura-maxima"
+              >Temperatura Máxima
+              <input type="number" name="tem_maxima" placeholder="3.0" />
+            </label>
+
+            <div class="form-submit-button-container">
               <button type="submit">Registrar</button>
             </div>
           </form>
         </div>
-
-        <br />
-        <br />
-        <br />
-        <br />
-
-        <!-- !! -->
-        <div class="formulario-conainer">
-          <div class="formulario">
-            <label
-              for="titulo"
-              class="titulo"
-              style="text-align: center; font-size: 20px; margin-bottom: 80px"
-              >Poner Heladera</label
-            >
-            <div class="nombre">
-              <label for="motivo">Ingresar nombre:</label>
-              <input
-                type="text"
-                id="motivo"
-                placeholder="Heladera Medrano UTN"
-              />
-            </div>
-            <div class="general">
-              <div class="campos">
-                <label for="motivo">Ingresar calle:</label>
-                <input type="text" id="motivo" placeholder="Av.Rivadavia" />
-              </div>
-              <div class="campos">
-                <label for="motivo">Nro domicilio:</label>
-                <input type="number" id="motivo" placeholder="0000" />
-              </div>
-            </div>
-            <div class="row auto justify-content-center">
-              <div class="nombre">
-                <label for="motivo">Seleccionar barrio:</label>
-              </div>
-              <select id="tipo" name="tipo" onchange="updateInput()">
-                <option value="" disabled selected>Seleccionar</option>
-                <option value="agronomia">Agronomia</option>
-                <option value="almagro">Almagro</option>
-                <option value="balvanera">Balvanera</option>
-                <option value="barracas">Barracas</option>
-              </select>
-            </div>
-            <div class="general">
-              <div class="campos">
-                <label for="motivo">Latitud:</label>
-                <input type="number" id="motivo" placeholder="0.00" />
-              </div>
-              <div class="campos">
-                <label for="motivo">Longitud:</label>
-                <input type="number" id="motivo" placeholder="0.00" />
-              </div>
-            </div>
-            <div class="nombre">
-              <label for="motivo">Ingresar capacidad:</label>
-              <input
-                type="text"
-                id="motivo"
-                placeholder="Heladera Medrano UTN"
-              />
-            </div>
-            <div class="boton-continuar">
-              <button type="submit" id="continuar" class="continuar">
-                Continuar
-              </button>
-            </div>
-          </div>
-        </div>
-        <!-- !! -->
-
-        <!-- Formulario de creación / registro de heladera nueva -->
-      </div>
-
-      <div class="side-panel">
-        <div id="map"></div>
       </div>
     </div>
   </body>
