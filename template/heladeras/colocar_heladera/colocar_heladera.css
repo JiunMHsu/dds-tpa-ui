@@ -131,8 +131,13 @@ input::-webkit-inner-spin-button {
 }
 
 .form-recomendacion {
+   grid-template-columns: 1fr 1fr 1fr;
    gap: .7rem;
    margin: 1rem 0 1rem;
+}
+
+.form-recomendacion label {
+   width: 10rem;
 }
 
 .form-recomendacion .form-button-container {
@@ -183,7 +188,8 @@ input::-webkit-inner-spin-button {
 
 .map-container {
    display: flex;
-   height: 40vh;
+   /* height: 100%; */
+   height: 60vh;
    width: 100%;
    border-radius: .7rem;
    overflow: hidden;
