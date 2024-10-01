@@ -1,0 +1,23 @@
+/* !! */
+
+.formulario {
+   display: grid;
+   gap: .5rem;
+
+   /* cambiar a grid-template-area */
+   grid-template-columns: 1fr 1fr;
+}
+
+.formulario label {
+   display: flex;
+   flex-direction: column;
+}
+
+.side-panel {
+   width: 35vw;
+}
+
+#map {
+   height: 100%;
+   width: 100%;
+}
