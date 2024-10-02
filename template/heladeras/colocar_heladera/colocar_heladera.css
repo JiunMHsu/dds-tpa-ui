@@ -1,9 +1,3 @@
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-   -webkit-appearance: none;
-   margin: 0;
-}
-
 .main-section {
    border: 1px solid var(--background-3);
    overflow-y: hidden;
@@ -28,7 +22,7 @@ input::-webkit-inner-spin-button {
    padding: 0 .2rem 0;
 }
 
-.solicitud-recomendacioes {
+.solicitud-recomendaciones {
    height: 55vh;
    overflow-x: scroll;
 }

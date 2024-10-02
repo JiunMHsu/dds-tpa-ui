@@ -1,0 +1,19 @@
+.form-container {
+   width: 60%;
+   padding: 0 1rem;
+}
+
+.side-panel {
+   width: 35vw;
+}
+
+.field-motivo textarea {
+   height: 5rem;
+   resize: vertical;
+   min-height: 4rem;
+}
+
+#map {
+   height: 100%;
+   width: 100%;
+}
