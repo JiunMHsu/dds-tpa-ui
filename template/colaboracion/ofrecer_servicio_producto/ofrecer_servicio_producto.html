@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ofrecer Producto o Servicio</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" href="base.css" />
+    <link rel="stylesheet" href="form.css" />
+    <link rel="stylesheet" href="ofrecer_servicio_producto.css" />
+  </head>
+
+  <body>
+    <div class="root">
+      <nav class="nav-bar">
+        <a href="colaborar.html" class="nav-option">
+          <span class="material-symbols-rounded nav-icon">
+            volunteer_activism
+          </span>
+          <div class="nav-txt">Colaborar</div>
+        </a>
+
+        <a href="reportar_falla.html" class="nav-option">
+          <span class="material-symbols-rounded nav-icon"> report </span>
+          <div class="nav-txt">Reportar Falla</div>
+        </a>
+
+        <a href="alertas.html" class="nav-option">
+          <span class="material-symbols-rounded nav-icon">
+            deployed_code_alert
+          </span>
+          <div class="nav-txt">Alertas</div>
+        </a>
+
+        <a href="heladeras.html" class="nav-option">
+          <span class="material-symbols-rounded nav-icon"> kitchen </span>
+          <div class="nav-txt">Heladeras</div>
+        </a>
+
+        <a href="canje_puntos.html" class="nav-option">
+          <span class="material-symbols-rounded nav-icon"> redeem </span>
+          <div class="nav-txt">Canje de Puntos</div>
+        </a>
+
+        <a href="notificaciones.html" class="nav-option">
+          <span class="material-symbols-rounded nav-icon">
+            mark_unread_chat_alt
+          </span>
+          <div class="nav-txt">Mensajes</div>
+        </a>
+
+        <a href="perfil.html" class="nav-option">
+          <span class="material-symbols-rounded nav-icon">
+            account_circle
+          </span>
+          <div class="nav-txt">Perfil</div>
+        </a>
+
+        <a href="home.html" class="nav-option">
+          <span class="material-symbols-rounded nav-icon"> home </span>
+          <div class="nav-txt">Home</div>
+        </a>
+      </nav>
+
+      <!-- MAIN -->
+      <div class="main-section">
+        <div class="form-container">
+          <h2 class="form-title">Ofrecer Producto o Servicio</h2>
+
+          <form action="/" method="post" class="form">
+            <label class="field-nombre">
+              Nombre de Producto / Servicio
+              <input
+                type="text"
+                name="nombre"
+                placeholder="Aire Acondicionado"
+                required
+              />
+            </label>
+
+            <label class="field-rubro">
+              Rubro
+              <select name="rubro" required>
+                <option value="" disabled selected>Seleccionar</option>
+                <!-- iterar según el define el sistema -->
+                <option value="gastronomia">Gastronomía</option>
+                <option value="electronica">Electrónica</option>
+                <option value="hogar">Hogar</option>
+              </select>
+            </label>
+
+            <label class="field-puntos">
+              Puntos Necesarios
+              <input
+                type="number"
+                min="1"
+                step="1"
+                name="puntos"
+                placeholder="570"
+                required
+              />
+            </label>
+
+            <label class="field-imagen">
+              Imagen
+              <input type="file" name="imagen" accept=".png, .jpg, .jpeg" required />
+            </label>
+
+            <div class="form-button-container">
+              <button type="submit">Aceptar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="side-panel"></div>
+    </div>
+  </body>
+</html>

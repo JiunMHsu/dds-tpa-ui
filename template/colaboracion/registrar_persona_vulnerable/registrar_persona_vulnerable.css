@@ -7,7 +7,7 @@
 }
 
 .form {
-   grid-template-columns: 20rem 15rem;
+   grid-template-columns: 2fr 1fr;
    column-gap: .5rem;
 }
 
@@ -16,7 +16,23 @@
    color: var(--foreground-1);
 }
 
-.field-monto {
+.field-nombre {
+   grid-column: 1 / -1;
+}
+
+.field-fecha-nacimiento {
+   grid-column: 1 / -1;
+}
+
+.field-barrio {
+   grid-column: 1 / -1;
+}
+
+.field-menores-a-cargo {
+   grid-column: 1 / -1;
+}
+
+.field-tarjeta {
    grid-column: 1 / -1;
 }
 
