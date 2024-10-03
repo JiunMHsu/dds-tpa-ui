@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Heladera Medrano UTN</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" href="base.css" />
+    <link rel="stylesheet" href="heladera_detalle.css" />
+
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js"></script>
+    <script src="map.js"></script>
+  </head>
+
+  <body>
+    <div class="root">
+      <nav class="nav-bar">
+        <a href="colaborar.html" class="nav-option">
+          <span class="material-symbols-rounded nav-icon">
+            volunteer_activism
+          </span>
+          <div class="nav-txt">Colaborar</div>
+        </a>
+
+        <a href="reportar_falla.html" class="nav-option">
+          <span class="material-symbols-rounded nav-icon"> report </span>
+          <div class="nav-txt">Reportar Falla</div>
+        </a>
+
+        <a href="alertas.html" class="nav-option">
+          <span class="material-symbols-rounded nav-icon">
+            deployed_code_alert
+          </span>
+          <div class="nav-txt">Alertas</div>
+        </a>
+
+        <a href="heladeras.html" class="nav-option">
+          <span class="material-symbols-rounded nav-icon"> kitchen </span>
+          <div class="nav-txt">Heladeras</div>
+        </a>
+
+        <a href="canje_puntos.html" class="nav-option">
+          <span class="material-symbols-rounded nav-icon"> redeem </span>
+          <div class="nav-txt">Canje de Puntos</div>
+        </a>
+
+        <a href="notificaciones.html" class="nav-option">
+          <span class="material-symbols-rounded nav-icon">
+            mark_unread_chat_alt
+          </span>
+          <div class="nav-txt">Mensajes</div>
+        </a>
+
+        <a href="perfil.html" class="nav-option">
+          <span class="material-symbols-rounded nav-icon">
+            account_circle
+          </span>
+          <div class="nav-txt">Perfil</div>
+        </a>
+
+        <a href="home.html" class="nav-option">
+          <span class="material-symbols-rounded nav-icon"> home </span>
+          <div class="nav-txt">Home</div>
+        </a>
+      </nav>
+
+      <!-- MAIN -->
+      <div class="main-section">
+        <div class="container">
+          <div class="header">
+            <h2 class="title">Heladera Medrano UTN</h2>
+            <a href="" class="edit-button">Configurar</a>
+          </div>
+
+          <div class="ultimo-estado card">
+            <p>
+              <span class="material-symbols-rounded card-detail-icon">
+                radio_button_checked
+              </span>
+              estado: Activo
+            </p>
+            <p>
+              <span class="material-symbols-rounded card-detail-icon">
+                ac_unit
+              </span>
+              última temperatura: -1°C
+            </p>
+            <p>
+              <span class="material-symbols-rounded card-detail-icon">
+                inventory_2
+              </span>
+              stock de viandas: 72
+            </p>
+          </div>
+
+          <div class="capacidad card-container">
+            <h3>Capacidad</h3>
+            <div class="card">
+              <p>
+                <span class="material-symbols-rounded card-detail-icon">
+                  background_dot_small
+                </span>
+                capacidad máxima: 83
+              </p>
+            </div>
+          </div>
+
+          <div class="rango-temp card-container">
+            <h3>Temperaturas</h3>
+            <div class="card">
+              <p>
+                <span class="material-symbols-rounded card-detail-icon">
+                  thermometer_add
+                </span>
+                máxima: 3°C
+              </p>
+              <p>
+                <span class="material-symbols-rounded card-detail-icon">
+                  thermometer_minus
+                </span>
+                mínima: -5°C
+              </p>
+            </div>
+          </div>
+
+          <div class="direccion card-container">
+            <h3>Dirección</h3>
+            <div class="card">
+              <p>
+                <span class="material-symbols-rounded card-detail-icon">
+                  location_on
+                </span>
+                calle y altura: Av. Medrano 951
+              </p>
+              <p>
+                <span class="material-symbols-rounded card-detail-icon">
+                  map
+                </span>
+                barrio: Almagro
+              </p>
+              <p>
+                <span class="material-symbols-rounded card-detail-icon">
+                  my_location
+                </span>
+                ubicación: -34.59857981526152, -58.420110294464294
+              </p>
+            </div>
+          </div>
+
+          <div class="inicio-funcionamiento card-container">
+            <h3>Inicio de Funcionamiento</h3>
+            <div class="card">
+              <p>
+                <span class="material-symbols-rounded card-detail-icon">
+                  today
+                </span>
+                fecha: 12/10/2021
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="side-panel">
+        <div id="map"></div>
+      </div>
+    </div>
+  </body>
+</html>
