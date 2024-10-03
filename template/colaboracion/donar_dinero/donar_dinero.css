@@ -3,12 +3,13 @@
 }
 
 .form-container {
-   width: 60%;
+   width: 40%;
    padding: 0 1rem;
 }
 
-.side-panel {
-   width: 35vw;
+.form {
+   grid-template-columns: 2fr 1fr;
+   column-gap: .5rem;
 }
 
 .form-title {
@@ -16,13 +17,10 @@
    color: var(--foreground-1);
 }
 
-.field-motivo textarea {
-   height: 5rem;
-   resize: vertical;
-   min-height: 4rem;
+.field-monto {
+   grid-column: 1 / -1;
 }
 
-#map {
-   height: 100%;
-   width: 100%;
+.side-panel {
+   display: none;
 }
