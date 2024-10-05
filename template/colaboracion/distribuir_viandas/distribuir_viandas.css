@@ -3,8 +3,11 @@
 }
 
 .form-container {
-   width: 60%;
    padding: 0 1rem;
+}
+
+.form {
+   grid-template-columns: 35rem;
 }
 
 .side-panel {

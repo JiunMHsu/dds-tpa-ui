@@ -1,0 +1,40 @@
+.main-section {
+   border: 1px solid var(--background-3);
+   margin: 0 1.5vh;
+   overflow-y: hidden;
+}
+
+.form-title {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   gap: 2rem;
+   width: 100%;
+   margin: 5% 0 0;
+}
+
+.form-header-option {
+   color: var(--foreground-1);
+   font-size: 1.5rem;
+   font-weight: 600;
+   text-decoration: none;
+
+   transition-property: all;
+   transition-duration: 300ms;
+}
+
+.form-header-option:hover {
+   text-decoration: underline;
+   text-shadow: 0 0 1rem var(--background-3);
+}
+
+.active {
+   color: var(--main-light-0);
+   text-shadow: 0 0 1rem var(--background-3);
+}
+
+.form {
+   grid-template-columns: 25rem;
+   margin-top: 2rem;
+}

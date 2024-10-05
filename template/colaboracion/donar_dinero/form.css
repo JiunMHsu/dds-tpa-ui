@@ -1,6 +1,6 @@
 /* Estructura del formulario */
 
-/* 
+/*
 <div class="form-container">
    <h2 class="form-title">Title</h2>
 
@@ -41,13 +41,13 @@ input::-webkit-inner-spin-button {
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   overflow-y: scroll;
+   overflow-y: hidden;
 }
 
 .form-title {
    display: flex;
    width: 100%;
-   margin: 0 0 7%;
+   margin: 5% 0 3%;
    font-size: 1.8rem;
    font-weight: 600;
 
@@ -59,8 +59,10 @@ input::-webkit-inner-spin-button {
    display: grid;
    grid-template-columns: 1fr;
    gap: 1rem;
-   column-gap: 2rem;
+   column-gap: .5rem;
    width: 100%;
+   margin: 2% 0 0;
+   overflow-y: scroll;
 }
 
 .form label {
@@ -99,7 +101,7 @@ input::-webkit-inner-spin-button {
    display: flex;
    justify-content: flex-end;
    align-items: center;
-   margin-top: 1rem;
+   margin: 1rem 0 1.5rem;
 }
 
 .form button {
