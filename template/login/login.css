@@ -11,7 +11,7 @@
    align-items: center;
    gap: 2rem;
    width: 100%;
-   margin: 5% 0 0;
+   margin: 5% 0 1rem;
 }
 
 .form-header-option {
@@ -36,5 +36,20 @@
 
 .form {
    grid-template-columns: 25rem;
-   margin-top: 2rem;
+   margin-top: 1rem;
+}
+
+.error-card {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   padding: 1.5rem 0;
+
+   background-color: var(--error-0);
+   border: 1px solid var(--error-1);
+   border-radius: .5rem;
+
+   color: var(--foreground-1);
 }
