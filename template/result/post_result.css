@@ -1,0 +1,82 @@
+.main-section {
+   align-items: center;
+   justify-content: center;
+   border: 1px solid var(--background-3);
+   margin: 0 1.5vh;
+   overflow-y: hidden;
+}
+
+.container {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+}
+
+.image-container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+img {
+   width: 20rem;
+}
+
+.divider {
+   height: 100%;
+   border-left: 1px solid var(--background-3);
+   margin: 0 4rem;
+}
+
+.text-container {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   height: 100%;
+}
+
+.title {
+   display: flex;
+   width: 100%;
+   margin: 0 0 .5rem;
+   font-size: 2.5rem;
+   font-weight: 600;
+}
+
+.description {
+   display: flex;
+   width: 100%;
+   margin: 1rem 0 1rem;
+   font-size: 1rem;
+   color: var(--main-light-0);
+}
+
+.redirect-buttons-container {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   gap: 1rem;
+   margin-top: 1rem;
+}
+
+.redirect-button {
+   padding: .5rem 1.2rem;
+   border-radius: .5rem;
+   cursor: pointer;
+   border: 1px solid var(--background-3);
+   width: 100%;
+
+   font-size: 1rem;
+   text-decoration: none;
+   text-align: center;
+   color: var(--foreground-1);
+
+   transition-property: all;
+   transition-duration: 300ms;
+}
+
+.redirect-button:hover {
+   color: var(--background-0);
+   background-color: var(--main-light-0);
+}
