@@ -1,0 +1,19 @@
+.main-section {
+   border: 1px solid var(--background-3);
+}
+
+.form-title {
+   margin: 5% 0 2rem;
+}
+
+.form {
+   grid-template-columns: 1fr 15fr;
+}
+
+.form label {
+   font-size: 1.4rem;
+}
+
+.side-panel {
+   display: none;
+}
