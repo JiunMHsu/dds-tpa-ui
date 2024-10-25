@@ -1,0 +1,12 @@
+.main-section {
+   border: 1px solid var(--background-3);
+}
+
+.side-panel {
+   width: 35vw;
+}
+
+#map {
+   height: 100%;
+   width: 100%;
+}

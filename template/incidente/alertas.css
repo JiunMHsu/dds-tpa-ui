@@ -1,0 +1,28 @@
+.list-title {
+   justify-content: center;
+   margin: 1rem 0;
+   font-size: 2.2rem;
+}
+
+.scrollable {
+   overflow-y: auto;
+   height: 100%;
+   align-items: center;
+}
+
+.list {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-gap: 1rem;
+   width: 80%;
+}
+
+.list-item {
+   display: flex;
+   align-items: flex-start;
+   height: 100%;
+}
+
+.side-panel {
+   display: none;
+}
